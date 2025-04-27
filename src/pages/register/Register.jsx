@@ -55,7 +55,7 @@ export default function Register() {
             Lupa Password?
           </a>
           <button className="login-button">Daftar</button>
-          <a href="/login.html">
+          <a href="/login">
             <button className="register-button">Masuk</button>
           </a>
           <li className="divider">atau</li>
