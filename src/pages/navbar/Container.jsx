@@ -1,4 +1,5 @@
 import Footer1 from "./Footer-1";
+import Footer from "./Footer";
 import NavbarKelas from "./NavbarKelas";
 
 export default function Container({ children }) {
@@ -7,6 +8,7 @@ export default function Container({ children }) {
       <NavbarKelas />
       {children}
       <Footer1 dis="hidden" disp="flex" />
+      <Footer />
     </div>
   );
 }
