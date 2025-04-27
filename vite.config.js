@@ -10,15 +10,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: "index.html",
-        login: "login.html",
-        register: "register.html",
-        home: "home.html",
-        kategori: "kategori.html",
-        detail_product: "detail-product.html",
-        metode: "metode.html",
-        bayar: "bayar.html",
-        kelas: "kelas.html",
-        soal: "soal.html",
       },
     },
   },
