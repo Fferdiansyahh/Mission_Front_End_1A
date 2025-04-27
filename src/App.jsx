@@ -1,15 +1,15 @@
 import Home from "./pages/home/Home";
 import Kategori from "./pages/home/1.2-All-Product/Kategori";
 import Login from "./pages/login/Login";
-import Bayar from "./pages/home/2.2-Bayar/main";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-
 import "./App.css";
-import UbahMetode from "./pages/home/2.3-Ubah-Metode/main";
+
 import Selesai from "./pages/home/2.4-Selesai/Selesai";
 import DetailProduct from "./pages/home/1.3-Detail-Product/Detailproduct";
 import Aturan from "./pages/kelas/4.2-Aturan/Aturan";
 import Soal from "./pages/kelas/4.4-Soal/Soal";
+import Bayar from "./pages/home/2.2-Bayar/Bayar";
+import UbahMetode from "./pages/home/2.3-Ubah-Metode/UbahMetode";
 
 export default function App() {
   return (
