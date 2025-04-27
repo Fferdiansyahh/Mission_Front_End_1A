@@ -1,4 +1,4 @@
-import "./Detailproduct.css";
+import "./DetailProduct.css";
 import DetailProductDes from "./DetailProductDes/DetailProductDes";
 import DetailProductUp from "./DetailProductUp/DetailProductUp";
 import CardImg1 from "../../../assets/card-1.jpeg";
