@@ -175,7 +175,7 @@ h5 {
   text-align: left;
   font-size: 16px;
   font-weight: 600;
-  color: #222325;
+  color: #222325 !important;
   line-height: 150%;
 }
 
@@ -199,8 +199,8 @@ h5 {
 
 .d-p-1-2 div {
   border-left: transparent solid 2px;
-  padding: 0px 20px;
-  width: 26%;
+  padding: 0px 30px;
+  width: 34% !important;
 }
 
 .d-p-1-1-2-1 {

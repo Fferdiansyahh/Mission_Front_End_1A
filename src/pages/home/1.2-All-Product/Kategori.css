@@ -109,7 +109,7 @@ p {
   height: 50px;
 }
 
-.input-wrapper {
+.input-wrapper-k {
   background-color: white;
   padding: 10px 15px;
   border: 1px solid #3a35411f;
@@ -119,14 +119,14 @@ p {
   align-items: center;
 }
 
-.input-wrapper input {
+.input-wrapper-k input {
   background-color: transparent;
   border: none;
   height: 100%;
   width: 100%;
   color: #333333ad;
 }
-.input-wrapper input:focus {
+.input-wrapper-k input:focus {
   outline: none;
 }
 

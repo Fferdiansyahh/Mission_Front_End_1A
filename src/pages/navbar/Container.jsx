@@ -1,5 +1,4 @@
 import Footer1 from "./Footer-1";
-
 import NavbarKelas from "./NavbarKelas";
 
 export default function Container({ children }) {

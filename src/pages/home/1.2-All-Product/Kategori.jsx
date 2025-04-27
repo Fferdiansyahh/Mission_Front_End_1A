@@ -177,7 +177,7 @@ export default function Kategori() {
                 </>
               }
             />
-            <div className="input-wrapper">
+            <div className="input-wrapper-k">
               <input placeholder="Cari Kelas"></input>
               <FaSearch id="search-icon" />
             </div>

@@ -101,7 +101,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  width: 800px;
+  width: 872px;
   padding: 20px;
   border: #3a35411f solid 1px;
   border-radius: 10px;
@@ -141,7 +141,7 @@ p {
   background-color: white;
   padding: 10px 15px;
   border: 1px solid #3a35411f;
-  width: max-content;
+  width: 180px;
   display: flex;
   border-radius: 10px;
   align-items: center;
@@ -283,7 +283,7 @@ p {
     flex-direction: row-reverse;
   }
 
-  .input-wrapper{
+  .input-wrapper {
     width: 100%;
     box-sizing: border-box;
   }
@@ -301,7 +301,7 @@ p {
     white-space: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
-    -webkit-overflow-scrolling: touch ;
+    -webkit-overflow-scrolling: touch;
   }
   .pesanan-2-2 {
     grid-template-columns: repeat(1, 1fr);

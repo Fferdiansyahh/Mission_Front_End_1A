@@ -112,9 +112,9 @@ export default function Pesanan() {
             </div>
           </div>
           <div className="pesanan-2-2">
-            {/* <DetailPesanan /> */}
+            <DetailPesanan />
             {/* <DetailKelas /> */}
-            <DetailProfile />
+            {/* <DetailProfile /> */}
           </div>
           <div className="pesanan-2-3">
             <a className="pesanan-2-3-1">
