@@ -7,8 +7,8 @@ export default function Container({ children }) {
     <div className="flex flex-col">
       <NavbarKelas />
       {children}
-      {/* <Footer1 dis="hidden" disp="flex" /> */}
-      <Footer />
+      <Footer1 dis="hidden" disp="flex" />
+      {/* <Footer /> */}
     </div>
   );
 }
