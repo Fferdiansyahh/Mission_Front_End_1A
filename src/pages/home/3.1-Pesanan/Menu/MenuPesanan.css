@@ -1,5 +1,59 @@
-.bagIcon {
-    width: 32px; /* Contoh lebar */
-    height: 32px; /* Contoh tinggi */
-    fill: blue; /* Contoh warna fill */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.menu-c:hover{
+  background-color: #FFF7D7CC;
+  border: #FFBD3A solid 1px;
+} 
+
+.menu-c:hover p{
+   color: #FFBD3A;
+} 
+.m-2 {
+  padding: 24px;
+  border: #3a35411f solid 1px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  gap: 8px;
+}
+.m-2 div {
+  display: flex;
+  flex-direction: row;
+  padding: 12px;
+  gap: 12px;
+  width: 200px;
+  border: transparent solid 1px;
+  border-radius: 4px;
+}
+
+.m-1 h1 {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.m-1 p {
+  font-size: 16px;
+}
+
+.m-2 img {
+  width: 16px;
+}
+
+.m-2 p {
+  color: #3a354161;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Dm sans", sans-serif;
+}
+
+@media (max-width: 500px) {
+  .menu-c{
+    width: 90% !important;
   }
+  
+}

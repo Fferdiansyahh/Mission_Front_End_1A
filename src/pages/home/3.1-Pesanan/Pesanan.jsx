@@ -2,10 +2,6 @@ import "./Pesanan.css";
 import React, { useState } from "react";
 
 import Home23 from "../home-2/Home23";
-import Book from "../../../assets/book.png";
-
-import Clock from "../../../assets/clock.png";
-import Shop from "../../../assets/shop.png";
 
 import CardImg1 from "../../../assets/card-1.jpeg";
 import CardImg2 from "../../../assets/card-2.jpeg";
@@ -32,6 +28,10 @@ import Dropdown from "../1.2-All-Product/components/Dropdown/Dropdown";
 import DropdownItem from "../1.2-All-Product/components/DropdownItem/DropdownItem";
 import Home21 from "../home-2/Home21";
 import MenuPesanan from "./Menu/MenuPesanan";
+import DetailPesanan from "./DetailPesanan/DetailPesanan";
+import DetailKelas from "./DetailKelas/DetailKelas";
+
+import DetailProfile from "./Profile/DetailProfile";
 export default function Pesanan() {
   const items = [
     { id: 0, des: "Harga Rendah" },
@@ -42,13 +42,9 @@ export default function Pesanan() {
     { id: 5, des: "Rating Terendah" },
   ];
   const dat = [2, 3, 4, 5, 6];
-  const filter1 = [
-    "Pemasaran",
-    "Digital & Teknologi",
-    "Pengembangan Diri",
-    "Bisnis Managemen",
-  ];
-  const filter2 = ["Kurang dari 4 Jam", "4- Jam", "Lebih dari 8 Jam"];
+
+  const itemPesanan = ["Semua Pesanan", "Menunggu", "Berhasil", "Gagal"];
+  const itemKelas = ["Semua Kelas", "Sedang Berjalan", "Selesai"];
 
   const data = [
     {
@@ -83,47 +79,42 @@ export default function Pesanan() {
     },
   ];
 
-  const [isBidangOpen, setIsBidangOpen] = useState(true);
-  const [isHargaOpen, setIsHargaOpen] = useState(true);
-  const [isDurasiOpen, setIsDurasiOpen] = useState(true);
-
-  const handleBidangClick = () => {
-    setIsBidangOpen(!isBidangOpen);
-  };
-  const handleHargaClick = () => {
-    setIsHargaOpen(!isHargaOpen);
-  };
-  const handleDurasiClick = () => {
-    setIsDurasiOpen(!isDurasiOpen);
-  };
-
   return (
     <div className="pes">
-      <Home21 />
       <div className="pesanan">
         <MenuPesanan />
 
         <div className="pesanan-2">
-          <div className="pesanan-2-1">
-            <Dropdown
-              buttonText="Urutkan"
-              content={
-                <>
-                  {items.map((item) => (
-                    <DropdownItem key={item.id}>{item.des}</DropdownItem>
-                  ))}
-                </>
-              }
-            />
-            <div className="input-wrapper">
-              <input placeholder="Cari Kelas"></input>
-              <FaSearch id="search-icon" />
+          <div className="pesanan-2-u">
+            <div className="pesanan-2-u-1">
+              {/* {itemKelas.map((item) => ( */}
+              {itemPesanan.map((item) => (
+                <div className="p-2-u">
+                  <p>{item}</p>
+                </div>
+              ))}
+            </div>
+            <div className="pesanan-2-1">
+              <div className="input-wrapper">
+                <input placeholder="Cari Kelas"></input>
+                <FaSearch id="search-icon" />
+              </div>
+              <Dropdown
+                buttonText="Urutkan"
+                content={
+                  <>
+                    {items.map((item) => (
+                      <DropdownItem key={item.id}>{item.des}</DropdownItem>
+                    ))}
+                  </>
+                }
+              />
             </div>
           </div>
           <div className="pesanan-2-2">
-            {data.map((item) => (
-              <Home23 {...item} />
-            ))}
+            {/* <DetailPesanan /> */}
+            {/* <DetailKelas /> */}
+            <DetailProfile />
           </div>
           <div className="pesanan-2-3">
             <a className="pesanan-2-3-1">

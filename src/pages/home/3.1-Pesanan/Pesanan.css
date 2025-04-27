@@ -3,10 +3,11 @@
 }
 
 .pesanan {
-  padding: 40px 0px 40px;
+  padding: 120px 60px 80px;
   justify-items: center;
   display: flex;
   gap: 40px;
+  justify-content: space-between;
 }
 .pesanan-1 {
   border: 1px solid #3a35411f;
@@ -100,6 +101,11 @@ p {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  width: 800px;
+  padding: 20px;
+  border: #3a35411f solid 1px;
+  border-radius: 10px;
+  background-color: white;
 }
 
 .pesanan-2-1 {
@@ -107,6 +113,28 @@ p {
   justify-content: end;
   gap: 16px;
   height: 50px;
+}
+
+.pesanan-2-u {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 52px;
+}
+.pesanan-2-u-1 {
+  /* width: 500px; */
+  box-sizing: border-box;
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+.p-2-u p {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "DM Sans", sans-serif;
+  color: #333333ad;
 }
 
 .input-wrapper {
@@ -135,9 +163,11 @@ p {
 }
 
 .pesanan-2-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  display: flex;
+  /* grid-template-columns: repeat(1, 1fr); */
   justify-content: space-between;
+  flex-direction: column;
   gap: 33px;
   width: 100%;
   box-sizing: border-box;
@@ -224,6 +254,7 @@ p {
   }
   .pesanan {
     flex-direction: column;
+    padding: 100px 28px 20px;
   }
 
   .p-1-1-2 div {
@@ -240,6 +271,37 @@ p {
 
   .p-1-1-2-1:focus + .p-1-1-2-2 {
     display: block !important;
+  }
+  .pesanan-2 {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .pesanan-2-1 {
+    box-sizing: border-box;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+  .input-wrapper{
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .pesanan-2-u {
+    max-width: 100%;
+    flex-direction: column;
+    height: 100%;
+    gap: 20px;
+    align-items: start;
+  }
+
+  .pesanan-2-u-1 {
+    overflow: hidden;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch ;
   }
   .pesanan-2-2 {
     grid-template-columns: repeat(1, 1fr);

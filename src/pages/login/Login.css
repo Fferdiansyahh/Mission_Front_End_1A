@@ -6,9 +6,7 @@ body {
   /* padding: 0px; */
 }
 
-
 /* navbar end */
-
 
 .login-container {
   width: 100%;
@@ -142,7 +140,6 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
-
 
 .card-h {
   text-decoration: none;
@@ -362,7 +359,6 @@ h5 {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
 .f-1 {
@@ -392,7 +388,6 @@ h5 {
   font-family: "DM Sans";
   padding-right: 50px;
   color: black !important;
-
 }
 
 .f-1-1-1 p {
@@ -432,7 +427,7 @@ h5 {
 .f-1-1-2 h3 {
   font-weight: bold;
   font-size: 18px;
-  color: black!important;
+  color: black !important;
 }
 
 .f-2-1 {
@@ -812,7 +807,6 @@ a {
     overflow-x: scroll;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
-    /* width: 90%; */
   }
 
   hr {

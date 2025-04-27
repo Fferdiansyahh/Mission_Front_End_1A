@@ -8,6 +8,8 @@ import "./App.css";
 import UbahMetode from "./pages/home/2.3-Ubah-Metode/main";
 import Selesai from "./pages/home/2.4-Selesai/Selesai";
 import DetailProduct from "./pages/home/1.3-Detail-Product/Detailproduct";
+import Aturan from "./pages/kelas/4.2-Aturan/Aturan";
+import Soal from "./pages/kelas/4.4-Soal/Soal";
 
 export default function App() {
   return (
@@ -33,6 +35,8 @@ export default function App() {
             <Route path="/ubah-metode" element={<UbahMetode />} />
             <Route path="/detail-pembayaran" element={<Selesai />} />
             <Route path="/detail-product" element={<DetailProduct />} />
+            <Route path="/aturan" element={<Aturan />} />
+            <Route path="/soal" element={<Soal />} />
           </Routes>
         </div>
       </BrowserRouter>
