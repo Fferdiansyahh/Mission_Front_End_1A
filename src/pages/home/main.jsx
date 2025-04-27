@@ -9,9 +9,7 @@ import Container from "../navbar/Container.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Container>
-    <Home />
+      <Home />
     </Container>
-    
-        
   </StrictMode>
 );

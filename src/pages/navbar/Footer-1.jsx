@@ -1,8 +1,3 @@
-import LogoBelajar from "../../assets/Logo_Video_ Belajar.png";
-import LogoInstagram from "../../assets/ig.png";
-import LogoIn from "../../assets/in.png";
-import LogoFacebook from "../../assets/fb.png";
-import LogoX from "../../assets/x.png";
 import "./NavbarKelas.css";
 
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
