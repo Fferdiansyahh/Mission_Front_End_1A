@@ -13,6 +13,10 @@ import UbahMetode from "./pages/home/2.3-Ubah-Metode/UbahMetode";
 import Metode from "./pages/home/2.1-Metode/Metode";
 import Register from "./pages/register/Register";
 import Kelas from "./pages/kelas/4.1-Kelas/Kelas";
+import Congrats from "./pages/kelas/4.7-Congrats/Congrats";
+import Rangkuman from "./pages/kelas/4.10-Rangkuman/Rangkuman";
+import Try from "./pages/kelas/4.7-Congrats/Try";
+import Sertifikat from "./pages/kelas/4.12-Sertifikat/Sertifikat";
 
 export default function App() {
   return (
@@ -32,6 +36,10 @@ export default function App() {
           <Route path="/aturan" element={<Aturan />} />
           <Route path="/soal" element={<Soal />} />
           <Route path="/kelas" element={<Kelas />} />
+          <Route path="/congrats" element={<Congrats />} />
+          <Route path="/try" element={<Try />} />
+          <Route path="/rangkuman" element={<Rangkuman />} />
+          <Route path="/sertifikat" element={<Sertifikat />} />
           <Route path="*" element={<div>404 Not Found</div>} />
         </Routes>
       </BrowserRouter>
