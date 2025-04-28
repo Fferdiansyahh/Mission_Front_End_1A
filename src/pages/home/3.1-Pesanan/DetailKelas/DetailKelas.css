@@ -60,14 +60,14 @@
 }
 
 .d-k-1 {
-  width: 362px;
+  /* max-width: 362px; */
   border: 1px solid #3a35411f;
   background-color: white;
   border-radius: 10px;
 
   display: flex;
   flex-direction: column;
-  width: 100%;
+  /* width: 100%; */
 }
 .d-k-img {
   height: 172px !important;
@@ -312,6 +312,8 @@ h5 {
 }
 .d-k-bar {
   display: flex;
+  justify-content: center;
+  
 }
 
 @media (max-width: 500px) {

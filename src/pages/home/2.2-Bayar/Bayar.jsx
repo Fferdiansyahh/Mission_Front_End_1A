@@ -24,13 +24,13 @@ export default function Bayar() {
   return (
     <>
       <Time />
-      <div className="metode-des">
-        <div className="metode">
+      <div className="bayar-des">
+        <div className="bayar">
           <Rincian display="flex" tit="Bayar Sekarang" link="/detail-pembayaran" to="/ubah-metode" />
           <MetodeBayar metodee="Tata Cara Pembayaran" display="none" />
         </div>
 
-        <div className="metode-des-2">
+        <div className="bayar-des-2">
           {isMobile ? (
             <DetailProductBuy image={ImgBuy} display="none" dis="none" />
           ) : (

@@ -32,6 +32,7 @@ import DetailPesanan from "./DetailPesanan/DetailPesanan";
 import DetailKelas from "./DetailKelas/DetailKelas";
 
 import DetailProfile from "./Profile/DetailProfile";
+import Container from "../../navbar/Container";
 export default function Pesanan() {
   const items = [
     { id: 0, des: "Harga Rendah" },
@@ -80,60 +81,64 @@ export default function Pesanan() {
   ];
 
   return (
-    <div className="pes">
-      <div className="pesanan">
-        <MenuPesanan />
+    <>
+      <Container>
+        <div className="pes">
+          <div className="pesanan">
+            <MenuPesanan />
 
-        <div className="pesanan-2">
-          <div className="pesanan-2-u">
-            <div className="pesanan-2-u-1">
-              {/* {itemKelas.map((item) => ( */}
-              {itemPesanan.map((item) => (
-                <div className="p-2-u">
-                  <p>{item}</p>
+            <div className="pesanan-2">
+              <div className="pesanan-2-u">
+                <div className="pesanan-2-u-1">
+                  {/* {itemKelas.map((item) => ( */}
+                  {itemPesanan.map((item) => (
+                    <div className="p-2-u">
+                      <p>{item}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-            <div className="pesanan-2-1">
-              <div className="input-wrapper">
-                <input placeholder="Cari Kelas"></input>
-                <FaSearch id="search-icon" />
+                <div className="pesanan-2-1">
+                  <div className="input-wrapper">
+                    <input placeholder="Cari Kelas"></input>
+                    <FaSearch id="search-icon" />
+                  </div>
+                  <Dropdown
+                    buttonText="Urutkan"
+                    content={
+                      <>
+                        {items.map((item) => (
+                          <DropdownItem key={item.id}>{item.des}</DropdownItem>
+                        ))}
+                      </>
+                    }
+                  />
+                </div>
               </div>
-              <Dropdown
-                buttonText="Urutkan"
-                content={
-                  <>
-                    {items.map((item) => (
-                      <DropdownItem key={item.id}>{item.des}</DropdownItem>
-                    ))}
-                  </>
-                }
-              />
+              <div className="pesanan-2-2">
+                {/* <DetailPesanan /> */}
+                {/* <DetailKelas /> */}
+              </div>
+                <DetailProfile />
+              <div className="pesanan-2-3">
+                <a className="pesanan-2-3-1">
+                  <FaChevronLeft className="icon-page" />
+                </a>
+                <a className="pesanan-2-3-2">
+                  <p>1</p>
+                </a>
+                {dat.map((item) => (
+                  <a className="pesanan-2-3-3">
+                    <p>{item}</p>
+                  </a>
+                ))}
+                <a className="pesanan-2-3-1">
+                  <FaChevronRight className="icon-page" />
+                </a>
+              </div>
             </div>
-          </div>
-          <div className="pesanan-2-2">
-            <DetailPesanan />
-            {/* <DetailKelas /> */}
-            {/* <DetailProfile /> */}
-          </div>
-          <div className="pesanan-2-3">
-            <a className="pesanan-2-3-1">
-              <FaChevronLeft className="icon-page" />
-            </a>
-            <a className="pesanan-2-3-2">
-              <p>1</p>
-            </a>
-            {dat.map((item) => (
-              <a className="pesanan-2-3-3">
-                <p>{item}</p>
-              </a>
-            ))}
-            <a className="pesanan-2-3-1">
-              <FaChevronRight className="icon-page" />
-            </a>
           </div>
         </div>
-      </div>
-    </div>
+      </Container>
+    </>
   );
 }

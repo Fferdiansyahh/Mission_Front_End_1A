@@ -3,7 +3,7 @@
 }
 
 .pesanan {
-  padding: 120px 60px 80px;
+  padding: 60px 60px 80px;
   justify-items: center;
   display: flex;
   gap: 40px;
@@ -254,7 +254,8 @@ p {
   }
   .pesanan {
     flex-direction: column;
-    padding: 100px 28px 20px;
+    padding: 30px 28px 20px;
+    width: 100vw;
   }
 
   .p-1-1-2 div {
@@ -302,6 +303,7 @@ p {
     overflow-x: scroll;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
+    width: 80vw;
   }
   .pesanan-2-2 {
     grid-template-columns: repeat(1, 1fr);

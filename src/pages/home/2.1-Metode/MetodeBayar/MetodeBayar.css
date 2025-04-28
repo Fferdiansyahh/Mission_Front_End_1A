@@ -1,16 +1,16 @@
-.metode-des-b-1 h1 {
+.met-b-des-b-1 h1 {
   font-family: "Poppins";
   font-size: 20px;
   font-weight: 600px;
 }
-.metode-des-b-1 h2 {
+.met-b-des-b-1 h2 {
   font-family: "Poppins";
   font-size: 15px;
   font-weight: 800px;
   margin: 0px;
 }
 
-.metode-des-b-1 p {
+.met-b-des-b-1 p {
   font-family: "DM Sans";
   font-size: 16px;
   font-weight: 400px;
@@ -19,7 +19,7 @@
   align-content: center;
 }
 
-.metode-des-b-1 h4 {
+.met-b-des-b-1 h4 {
   font-family: "DM Sans";
   font-size: 18px;
   font-weight: 900px;
@@ -28,13 +28,13 @@
   margin: 0px;
 }
 
-.metode-des-b-1 img {
+.met-b-des-b-1 img {
   width: 20px;
   height: 20px;
   margin-top: 2px;
 }
 
-.metode-des-b-1 {
+.met-b-des-b-1 {
   border: #3a35411f 1px solid;
   background-color: white;
   padding: 24px;
@@ -44,13 +44,13 @@
   flex-direction: column;
 }
 
-.metode-des-b-1-1 {
+.met-b-des-b-1-1 {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.metode-des-b-1-1-1 {
+.met-b-des-b-1-1-1 {
   display: flex;
   flex-direction: row;
   gap: 16px;
@@ -60,7 +60,7 @@
   border-radius: 10px;
 }
 
-.metode-des-b-1-1-1 div {
+.met-b-des-b-1-1-1 div {
   display: flex;
   flex-direction: row;
   gap: 16px;
@@ -71,7 +71,7 @@
   color: #333333ad;
 }
 
-.metode-des-b-1 img {
+.met-b-des-b-1 img {
   color: #333333ad;
 }
 
@@ -115,17 +115,17 @@
 }
 
 @media (max-width: 500px) {
-  /* .metode-des-b-1 h2 {
+  /* .met-b-des-b-1 h2 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
-  .metode-des-b-1-1-1 div {
+  .met-b-des-b-1-1-1 div {
     display: none;
   }
 
-  .metode-des-b-1 h4 {
+  .met-b-des-b-1 h4 {
     font-size: 15px;
     font-weight: bold;
   } */

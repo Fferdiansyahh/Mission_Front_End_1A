@@ -15,7 +15,7 @@ import mc from "../../../../assets/mc.png";
 import ceklis from "../../../../assets/ceklis.png";
 
 export default function MetodeBayar(props) {
-  const { metodee, display } = props;
+  const { metode, display } = props;
   const dataTransferBank = [
     { id: 0, img: imgBank, bank: "BCA", type: "transferBank" },
     { id: 1, img: imgBankBNI, bank: "BNI", type: "transferBank" },
@@ -54,10 +54,10 @@ export default function MetodeBayar(props) {
   };
 
   return (
-    <div className="metode-des-b-1">
-      <h1>{metodee}</h1>
-      <div className="metode-des-b-1-1">
-        <div className="metode-des-b-1-1-1" onClick={handleTransferBankClick}>
+    <div className="met-b-des-b-1">
+      <h1>{metode}</h1>
+      <div className="met-b-des-b-1-1">
+        <div className="met-b-des-b-1-1-1" onClick={handleTransferBankClick}>
           <div>
             <h2>Transfer Bank</h2>
           </div>
@@ -72,7 +72,7 @@ export default function MetodeBayar(props) {
             {dataTransferBank.map((item) => (
               <div
                 key={item.id}
-                className={`metode-des-b-1-1-1 bank-item ${
+                className={`met-b-des-b-1-1-1 bank-item ${
                   selectedPayment?.id === item.id &&
                   selectedPayment?.type === item.type
                     ? "selected"
@@ -93,7 +93,7 @@ export default function MetodeBayar(props) {
           </div>
         )}
 
-        <div className="metode-des-b-1-1-1" onClick={handleEWalletClick}>
+        <div className="met-b-des-b-1-1-1" onClick={handleEWalletClick}>
           <div>
             <h2>E-Wallet</h2>
           </div>
@@ -108,7 +108,7 @@ export default function MetodeBayar(props) {
             {dataEWallet.map((item) => (
               <div
                 key={item.id}
-                className={`metode-des-b-1-1-1 bank-item ${
+                className={`met-b-des-b-1-1-1 bank-item ${
                   selectedPayment?.id === item.id &&
                   selectedPayment?.type === item.type
                     ? "selected"
@@ -129,7 +129,7 @@ export default function MetodeBayar(props) {
           </div>
         )}
 
-        <div className="metode-des-b-1-1-1" onClick={handleKartuClick}>
+        <div className="met-b-des-b-1-1-1" onClick={handleKartuClick}>
           <div>
             <h2>Kartu Kredit/Debit</h2>
           </div>
@@ -145,7 +145,7 @@ export default function MetodeBayar(props) {
             {dataKartu.map((item) => (
               <div
                 key={item.id}
-                className={`metode-des-b-1-1-1 bank-item ${
+                className={`met-b-des-b-1-1-1 bank-item ${
                   selectedPayment?.id === item.id &&
                   selectedPayment?.type === item.type
                     ? "selected"

@@ -30,6 +30,8 @@ import {
 import Dropdown from "./components/Dropdown/Dropdown";
 import DropdownItem from "./components/DropdownItem/DropdownItem";
 import Home21 from "../home-2/Home21";
+import Container from "../../navbar/Container";
+
 export default function Kategori() {
   const items = [
     { id: 0, des: "Harga Rendah" },
@@ -96,115 +98,119 @@ export default function Kategori() {
   };
 
   return (
-    <div className="kat">
-      <Home21 />
-      <div className="kategori">
-        <div className="kategori-1">
-          <div className="k-1-1-1">
-            <h6>Filter</h6>
-            <p>Reset</p>
-          </div>
-          <div className="k-1-1-2">
-            <div>
-              <a className="k-1-1-2-1" onClick={handleBidangClick}>
-                <img src={Book} alt="#"></img> <h6>Bidang Study</h6>
-              </a>
-              <FaChevronDown
-                className={`arrow-icon ${isBidangOpen ? "open" : ""}`}
-              />
-            </div>
-            {isBidangOpen && (
-              <div className="k-1-1-2-2">
-                {filter1.map((item) => (
-                  <div className="k-1-1-2-2-1">
-                    <a></a>
-                    <p>{item}</p>
+    <>
+      <Container>
+        <div className="kat">
+          <Home21 />
+          <div className="kategori">
+            <div className="kategori-1">
+              <div className="k-1-1-1">
+                <h6>Filter</h6>
+                <p>Reset</p>
+              </div>
+              <div className="k-1-1-2">
+                <div>
+                  <a className="k-1-1-2-1" onClick={handleBidangClick}>
+                    <img src={Book} alt="#"></img> <h6>Bidang Study</h6>
+                  </a>
+                  <FaChevronDown
+                    className={`arrow-icon ${isBidangOpen ? "open" : ""}`}
+                  />
+                </div>
+                {isBidangOpen && (
+                  <div className="k-1-1-2-2">
+                    {filter1.map((item) => (
+                      <div className="k-1-1-2-2-1">
+                        <a></a>
+                        <p>{item}</p>
+                      </div>
+                    ))}
                   </div>
+                )}
+              </div>
+              <div className="k-1-1-2">
+                <div onClick={handleHargaClick}>
+                  <a className="k-1-1-2-1">
+                    <img src={Shop} alt="#"></img> <h6>Harga</h6>
+                  </a>
+                  <FaChevronDown
+                    className={`arrow-icon ${isHargaOpen ? "open" : ""}`}
+                  />
+                </div>
+                {isHargaOpen && (
+                  <div className="k-1-1-2-2">
+                    {filter1.map((item) => (
+                      <div className="k-1-1-2-2-1">
+                        <a></a>
+                        <p>{item}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+              <div className="k-1-1-2">
+                <div>
+                  <a className="k-1-1-2-1" onClick={handleDurasiClick}>
+                    <img src={Clock} alt="#"></img> <h6>Durasi</h6>
+                  </a>
+                  <FaChevronDown
+                    className={`arrow-icon ${isDurasiOpen ? "open" : ""}`}
+                  />
+                </div>
+                {isDurasiOpen && (
+                  <div className="k-1-1-2-2">
+                    {filter2.map((item) => (
+                      <div className="k-1-1-2-2-1">
+                        <a></a>
+                        <p>{item}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+            <div className="kategori-2">
+              <div className="kategori-2-1">
+                <Dropdown
+                  buttonText="Urutkan"
+                  content={
+                    <>
+                      {items.map((item) => (
+                        <DropdownItem key={item.id}>{item.des}</DropdownItem>
+                      ))}
+                    </>
+                  }
+                />
+                <div className="input-wrapper-k">
+                  <input placeholder="Cari Kelas"></input>
+                  <FaSearch id="search-icon" />
+                </div>
+              </div>
+              <div className="kategori-2-2">
+                {data.map((item) => (
+                  <Home23 {...item} />
                 ))}
               </div>
-            )}
-          </div>
-          <div className="k-1-1-2">
-            <div onClick={handleHargaClick}>
-              <a className="k-1-1-2-1">
-                <img src={Shop} alt="#"></img> <h6>Harga</h6>
-              </a>
-              <FaChevronDown
-                className={`arrow-icon ${isHargaOpen ? "open" : ""}`}
-              />
-            </div>
-            {isHargaOpen && (
-              <div className="k-1-1-2-2">
-                {filter1.map((item) => (
-                  <div className="k-1-1-2-2-1">
-                    <a></a>
+              <div className="kategori-2-3">
+                <a className="kategori-2-3-1">
+                  <FaChevronLeft className="icon-page" />
+                </a>
+                <a className="kategori-2-3-2">
+                  <p>1</p>
+                </a>
+                {dat.map((item) => (
+                  <a className="kategori-2-3-3">
                     <p>{item}</p>
-                  </div>
+                  </a>
                 ))}
+                <a className="kategori-2-3-1">
+                  <FaChevronRight className="icon-page" />
+                </a>
               </div>
-            )}
-          </div>
-          <div className="k-1-1-2">
-            <div>
-              <a className="k-1-1-2-1" onClick={handleDurasiClick}>
-                <img src={Clock} alt="#"></img> <h6>Durasi</h6>
-              </a>
-              <FaChevronDown
-                className={`arrow-icon ${isDurasiOpen ? "open" : ""}`}
-              />
             </div>
-            {isDurasiOpen && (
-              <div className="k-1-1-2-2">
-                {filter2.map((item) => (
-                  <div className="k-1-1-2-2-1">
-                    <a></a>
-                    <p>{item}</p>
-                  </div>
-                ))}
-              </div>
-            )}
           </div>
         </div>
-        <div className="kategori-2">
-          <div className="kategori-2-1">
-            <Dropdown
-              buttonText="Urutkan"
-              content={
-                <>
-                  {items.map((item) => (
-                    <DropdownItem key={item.id}>{item.des}</DropdownItem>
-                  ))}
-                </>
-              }
-            />
-            <div className="input-wrapper-k">
-              <input placeholder="Cari Kelas"></input>
-              <FaSearch id="search-icon" />
-            </div>
-          </div>
-          <div className="kategori-2-2">
-            {data.map((item) => (
-              <Home23 {...item} />
-            ))}
-          </div>
-          <div className="kategori-2-3">
-            <a className="kategori-2-3-1">
-              <FaChevronLeft className="icon-page" />
-            </a>
-            <a className="kategori-2-3-2">
-              <p>1</p>
-            </a>
-            {dat.map((item) => (
-              <a className="kategori-2-3-3">
-                <p>{item}</p>
-              </a>
-            ))}
-            <a className="kategori-2-3-1">
-              <FaChevronRight className="icon-page" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+      </Container>
+    </>
   );
 }

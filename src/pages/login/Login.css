@@ -4,6 +4,7 @@ body {
   height: 100%;
   margin: 0px;
   /* padding: 0px; */
+  width: 100% !important;
 }
 
 /* navbar end */
@@ -100,11 +101,12 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  width: auto;
 }
 
 .b-2-2 {
   box-sizing: border-box;
-  width: 500px;
+  /* width: 500px; */
   margin: 50px 0px;
   text-align: left;
   display: flex;
@@ -146,14 +148,15 @@ body {
 }
 
 .card-1 {
-  width: 362px;
+  width: 100%;
   border: 1px solid #3a35411f;
   background-color: white;
   border-radius: 10px;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  width: 90%;
+  box-sizing: border-box;
+  /* width: 90%; */
 }
 .card-img {
   height: 193px;
@@ -190,17 +193,17 @@ body {
   display: flex;
   align-items: center;
   gap: 3px;
-  padding-bottom: 7px;
+  /* padding-bottom: 7px; */
 }
 
 .card-p-d p {
-  padding-top: 7px;
+  /* padding-top: 7px; */
 }
 
 .card-p-d h5 {
   margin-top: 7px;
   font-size: 16px;
-  color: #333333ad;
+  color: #333333ad !important;
 }
 
 .card-t-p {
@@ -233,6 +236,7 @@ h5 {
   margin: 0px;
   text-align: left;
   font-size: 20px;
+  color: black !important;
 }
 .card-1-1-2 p {
   margin: 0px;
@@ -279,6 +283,7 @@ h5 {
 .b-3 {
   max-width: 500px;
   margin: 80px 20px;
+  text-align: center;
 }
 
 .b-3-1 {
@@ -321,6 +326,7 @@ h5 {
   border: 1px solid #ddd;
   border-radius: 10px;
   box-sizing: border-box;
+  background-color: white;
 }
 
 .beranda-3 button {
@@ -640,7 +646,7 @@ a {
     margin: 40px 0px 40px 0px;
   }
   .card-1 {
-    width: 88%;
+    width: 90%;
     /* margin: 0px 20px; */
   }
   .card-img {
@@ -693,7 +699,7 @@ a {
 
   .beranda-2 {
     margin: 0px 20px;
-    width: 90%;
+    width: 100%;
   }
 
   .beranda-3 {
@@ -807,6 +813,8 @@ a {
     overflow-x: scroll;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
+    width: 100vw;
+    box-sizing: border-box;
   }
 
   hr {

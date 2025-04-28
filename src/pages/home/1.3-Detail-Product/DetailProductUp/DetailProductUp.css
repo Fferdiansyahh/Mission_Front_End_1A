@@ -1,13 +1,14 @@
 .detail-up-1 {
   display: flex;
   align-items: center;
-
+justify-content: start;
   gap: 7px;
 }
 
 .detail-up-1 p {
   margin: 0px;
   color: #333333ad;
+  width: max-content;
 }
 
 .detail-up-1 h6 {
@@ -96,5 +97,12 @@ h3 {
 
   .card-u-1-1-2-1 p {
     color: #c1c2c4 !important;
+  }
+
+  .detail-up-1 h6 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 50vw;
   }
 }

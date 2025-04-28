@@ -6,6 +6,7 @@ import DetailProductBuy from "../1.3-Detail-Product/DetailProductBuy/DetailProdu
 import MetodeBayar from "../2.1-Metode/MetodeBayar/MetodeBayar";
 import Rincian from "../2.1-Metode/Rincian/Rincian";
 import Time from "../2.1-Metode/Time";
+import Container from "../../navbar/Container";
 
 export default function UbahMetode() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 500);
@@ -23,28 +24,30 @@ export default function UbahMetode() {
   }, []);
   return (
     <>
-      <div className="metode-des">
-        <div className="metode">
-          <Rincian
-            display="none"
-            tit="Bayar Sekarang"
-            dis="none"
-            tx1="Ringkasan Belanja"
-            tx2="Total Harga (3 barang)"
-            tx3="Ongkos Kirim"
-            link="/detail-pembayaran"
-          />
-          <MetodeBayar metodee="Tata Cara Pembayaran" display="block" />
-        </div>
+      <Container>
+        <div className="ub-des">
+          <div className="ub">
+            <Rincian
+              display="none"
+              tit="Bayar Sekarang"
+              dis="none"
+              tx1="Ringkasan Belanja"
+              tx2="Total Harga (3 barang)"
+              tx3="Ongkos Kirim"
+              link="/detail-pembayaran"
+            />
+            <MetodeBayar metodee="Tata Cara Pembayaran" display="block" />
+          </div>
 
-        <div className="metode-des-2">
-          {isMobile ? (
-            <DetailProductBuy image={ImgBuy} display="none" dis="none" />
-          ) : (
-            <DetailProductBuy image={ImgBuy} display="block" dis="none" />
-          )}
+          <div className="ub-des-2">
+            {isMobile ? (
+              <DetailProductBuy image={ImgBuy} display="none" dis="none" />
+            ) : (
+              <DetailProductBuy image={ImgBuy} display="block" dis="none" />
+            )}
+          </div>
         </div>
-      </div>
+      </Container>
     </>
   );
 }

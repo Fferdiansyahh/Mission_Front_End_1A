@@ -3,11 +3,12 @@ import "./Login.css";
 import LogoGoogle from "../../assets/Logo_Google.png";
 import LockIcon from "../../assets/eye-off.png";
 import Navbar from "../navbar/Navbar";
+import Navbar1 from "../navbar/Navbar-1";
 
 export default function Login() {
   return (
     <>
-      <Navbar />
+      <Navbar1 />
       <div className="login-container">
         <div className="form-container">
           <h2>Masuk ke Akun</h2>

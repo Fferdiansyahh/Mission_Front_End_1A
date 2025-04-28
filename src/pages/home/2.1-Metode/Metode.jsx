@@ -4,6 +4,7 @@ import ImgBuy from "../../../assets/card-1.jpeg";
 import DetailProductBuy from "../1.3-Detail-Product/DetailProductBuy/DetailProductBuy";
 import MetodeBayar from "./MetodeBayar/MetodeBayar";
 import Rincian from "./Rincian/Rincian";
+import Container from "../../navbar/Container";
 
 export default function Metode() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 500);
@@ -21,20 +22,22 @@ export default function Metode() {
   }, []);
   return (
     <>
-      <div className="metode-des">
-        <div className="metode">
-          <MetodeBayar metodee="Metode Pembayaran" display="none" />
-          <Rincian display="none" link="/bayar" />
-        </div>
+      <Container>
+        <div className="met-des">
+          <div className="met">
+            <MetodeBayar mete="Metode Pembayaran" display="none" />
+            <Rincian display="none" link="/bayar" />
+          </div>
 
-        <div className="metode-des-2">
-          {isMobile ? (
-            <DetailProductBuy image={ImgBuy} display="none" dis="none" />
-          ) : (
-            <DetailProductBuy image={ImgBuy} display="block" dis="none" />
-          )}
+          <div className="met-des-2">
+            {isMobile ? (
+              <DetailProductBuy image={ImgBuy} display="none" dis="none" />
+            ) : (
+              <DetailProductBuy image={ImgBuy} display="block" dis="none" />
+            )}
+          </div>
         </div>
-      </div>
+      </Container>
     </>
   );
 }

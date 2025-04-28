@@ -83,7 +83,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
 
-    width: 110px;
+    max-width: 110px;
   }
 
   .progress-bar {

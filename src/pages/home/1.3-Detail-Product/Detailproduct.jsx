@@ -11,6 +11,7 @@ import CardImgU1 from "../../../assets/u-1.png";
 import CardImgU2 from "../../../assets/u-2.png";
 import CardImgU3 from "../../../assets/u-3.png";
 import Home23 from "../home-2/Home23";
+import Container from "../../navbar/Container";
 export default function DetailProduct() {
   const data = [
     {
@@ -32,19 +33,21 @@ export default function DetailProduct() {
 
   return (
     <>
-      <div className="pdetail-1">
-        <DetailProductUp />
-        <DetailProductDes />
-        <div className="b-2-1">
-          <h1>Video Terkait Lainnya</h1>
-          <p>Ekspansi Pengetahuan Anda dengan Rekomendasi Spesial Kami!</p>
+      <Container>
+        <div className="pdetail-1">
+          <DetailProductUp />
+          <DetailProductDes />
+          <div className="b-2-1">
+            <h1>Video Terkait Lainnya</h1>
+            <p>Ekspansi Pengetahuan Anda dengan Rekomendasi Spesial Kami!</p>
+          </div>
+          <div className="b-2-3">
+            {data.map((item) => (
+              <Home23 {...item} />
+            ))}
+          </div>
         </div>
-        <div className="b-2-3">
-          {data.map((item) => (
-            <Home23 {...item} />
-          ))}
-        </div>
-      </div>
+      </Container>
     </>
   );
 }

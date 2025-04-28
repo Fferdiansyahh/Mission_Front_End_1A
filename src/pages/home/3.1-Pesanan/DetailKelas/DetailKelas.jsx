@@ -105,7 +105,7 @@ export default function DetailKelas(props) {
           <div className="d-k-1-2">
             <div className="d-k-bar">
               <p>Progres Kelas : </p>
-              <h4>{item.pg}%</h4>
+              <h4 className=" flex items-center ">{item.pg}%</h4>
               <div className="progress-bar-c">
                 <div className="progress-bar-1">
                   <div
