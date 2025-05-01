@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 .n-2-1 a,
 p {
   text-decoration: none;
@@ -22,7 +24,7 @@ p {
   /* max-width: 1150px; */
   display: flex;
   align-items: center;
-  margin: 0px 56px;
+  margin: 0px 120px;
   justify-content: space-between;
   width: 100%;
 }
@@ -63,7 +65,6 @@ nav ul li {
 }
 
 .n-2 p {
-  color: #333333ad;
   margin: 0px;
   align-content: center;
 }
@@ -79,4 +80,8 @@ nav ul li {
   margin-left: 120px;
 }
 
-@media (max-width: 500px) {}
+@media (max-width: 500px) {
+  .n {
+    margin: 0px 28px;
+  }
+}

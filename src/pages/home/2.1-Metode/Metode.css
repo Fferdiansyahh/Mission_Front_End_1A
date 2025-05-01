@@ -1,7 +1,7 @@
 .met-des {
   display: flex;
   flex-direction: row;
-  width: 100vw;
+  width: 90vw;
   gap: 36px;
   margin: 60px 64px;
   justify-content: space-between;

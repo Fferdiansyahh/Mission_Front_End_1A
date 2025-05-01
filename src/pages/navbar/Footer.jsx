@@ -4,9 +4,11 @@ import LogoIn from "../../assets/in.png";
 import LogoFacebook from "../../assets/fb.png";
 import LogoX from "../../assets/x.png";
 
-export default function Footer({}) {
+export default function Footer(props) {
+const {dis="block"} = props
+
   return (
-    <div className="footer">
+    <div style={{ display: dis }} className="footer">
       <div className="footer-1" />
       <div className="f-1">
         <div className="f-1-1">

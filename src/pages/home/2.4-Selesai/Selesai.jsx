@@ -6,9 +6,14 @@ import ImgTertunda from "/src/assets/tertunda.png";
 import DetailProductBuy from "../1.3-Detail-Product/DetailProductBuy/DetailProductBuy";
 import MetodeBayar from "../2.1-Metode/MetodeBayar/MetodeBayar";
 import Rincian from "../2.1-Metode/Rincian/Rincian";
+import Container from "../../navbar/Container";
 
 export default function Selesai(props) {
-  const { initialImage = ImgTertunda, initialTitle = "Tertunda", initialLink = "" } = props;
+  const {
+    initialImage = ImgTertunda,
+    initialTitle = "Tertunda",
+    initialLink = "",
+  } = props;
   const [isVisible, setIsVisible] = useState(false);
   const [image, setImage] = useState(initialImage);
   const [title, setTitle] = useState(initialTitle);
@@ -22,30 +27,34 @@ export default function Selesai(props) {
   };
 
   return (
-    <div className="done">
-      <div className="done-1">
-        <div className="done-1-1"></div>
-        <img src={image} alt="Image_Selesai" />
-        <div className="done-1-2">
-          <h4>Pembayaran {title}</h4>
-          <p className="text">
-            Silakan cek email kamu untuk informasi lebih lanjut. Hubungi kami
-            jika ada kendala.
-          </p>
-          {!isVisible && (
-            <button className="button" onClick={handleClickButton}>
-              <p>Lihat Detail Pesanan</p>
-            </button>
-          )}
-          {isVisible && (
-            <a href={link}>
-              <button className="button">
-                <p>Lihat Detail Pesanan</p>
-              </button>
-            </a>
-          )}
+    <>
+      <Container>
+        <div className="done">
+          <div className="done-1">
+            <div className="done-1-1"></div>
+            <img src={image} alt="Image_Selesai" />
+            <div className="done-1-2">
+              <h4>Pembayaran {title}</h4>
+              <p className="text">
+                Silakan cek email kamu untuk informasi lebih lanjut. Hubungi
+                kami jika ada kendala.
+              </p>
+              {!isVisible && (
+                <button className="button" onClick={handleClickButton}>
+                  <p>Lihat Detail Pesanan</p>
+                </button>
+              )}
+              {isVisible && (
+                <a href={link}>
+                  <button className="button">
+                    <p>Lihat Detail Pesanan</p>
+                  </button>
+                </a>
+              )}
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </Container>
+    </>
   );
 }

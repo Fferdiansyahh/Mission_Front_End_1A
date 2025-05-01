@@ -1,5 +1,5 @@
-import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+
 import Home from "./pages/home/Home";
 import Kategori from "./pages/home/1.2-All-Product/Kategori";
 import Login from "./pages/login/Login";
@@ -17,32 +17,150 @@ import Congrats from "./pages/kelas/4.7-Congrats/Congrats";
 import Rangkuman from "./pages/kelas/4.10-Rangkuman/Rangkuman";
 import Try from "./pages/kelas/4.7-Congrats/Try";
 import Sertifikat from "./pages/kelas/4.12-Sertifikat/Sertifikat";
+import { AuthProvider, useAuth } from "./data/authContext";
+
+// Komponen untuk proteksi route
+function ProtectedRoute({ children }) {
+  const { isLoggedIn } = useAuth();
+  return isLoggedIn ? children : <Navigate to="/login" replace />;
+}
+
+// Komponen untuk redirect jika sudah login
+function GuestRoute({ children }) {
+  const { isLoggedIn } = useAuth();
+  return !isLoggedIn ? children : <Navigate to="/" replace />;
+}
 
 export default function App() {
   return (
-    <>
+    <AuthProvider>
       <BrowserRouter>
         <Routes>
+          {/* Public Routes */}
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
           <Route path="/kategori" element={<Kategori />} />
-          <Route path="/bayar" element={<Bayar />} />
-          <Route path="/metode" element={<Metode />} />
-          <Route path="/pesanan" element={<Pesanan />} />
-          <Route path="/ubah-metode" element={<UbahMetode />} />
-          <Route path="/detail-pembayaran" element={<Selesai />} />
           <Route path="/detail-product" element={<DetailProduct />} />
-          <Route path="/aturan" element={<Aturan />} />
-          <Route path="/soal" element={<Soal />} />
-          <Route path="/kelas" element={<Kelas />} />
-          <Route path="/congrats" element={<Congrats />} />
-          <Route path="/try" element={<Try />} />
-          <Route path="/rangkuman" element={<Rangkuman />} />
-          <Route path="/sertifikat" element={<Sertifikat />} />
+
+          {/* Guest-only Routes */}
+          <Route
+            path="/login"
+            element={
+              <GuestRoute>
+                <Login />
+              </GuestRoute>
+            }
+          />
+          <Route
+            path="/register"
+            element={
+              <GuestRoute>
+                <Register />
+              </GuestRoute>
+            }
+          />
+
+          {/* Protected Routes */}
+          <Route
+            path="/bayar"
+            element={
+              <ProtectedRoute>
+                <Bayar />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/metode"
+            element={
+              <ProtectedRoute>
+                <Metode />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/pesanan"
+            element={
+              <ProtectedRoute>
+                <Pesanan />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/ubah-metode"
+            element={
+              <ProtectedRoute>
+                <UbahMetode />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/detail-pembayaran"
+            element={
+              <ProtectedRoute>
+                <Selesai />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/kelas"
+            element={
+              <ProtectedRoute>
+                <Kelas />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/aturan"
+            element={
+              <ProtectedRoute>
+                <Aturan />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/soal"
+            element={
+              <ProtectedRoute>
+                <Soal />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/congrats"
+            element={
+              <ProtectedRoute>
+                <Congrats />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/try"
+            element={
+              <ProtectedRoute>
+                <Try />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/rangkuman"
+            element={
+              <ProtectedRoute>
+                <Rangkuman />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/sertifikat"
+            element={
+              <ProtectedRoute>
+                <Sertifikat />
+              </ProtectedRoute>
+            }
+          />
+
+          {/* 404 Not Found */}
           <Route path="*" element={<div>404 Not Found</div>} />
         </Routes>
       </BrowserRouter>
-    </>
+    </AuthProvider>
   );
 }

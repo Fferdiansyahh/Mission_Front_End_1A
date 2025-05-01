@@ -1,5 +1,5 @@
-import PlayB from "../../../assets/play.svg";
-import ListKelas from "../4.1-Kelas/ListKelas/ListKelas";
+import Serti from "/src/assets/sertifikat.png";
+import imgU from "/src/assets/u-2.png";
 
 import Footer1 from "../../navbar/Footer-1";
 
@@ -9,119 +9,92 @@ import rangkum from "../../../assets/book.svg";
 import quiz from "../../../assets/quiz.svg";
 
 import Down from "../../../assets/dow.png";
+import Container from "../../navbar/Container";
+import { MdOutlineStar } from "react-icons/md";
 
 export default function Sertifikat() {
-  const dataKelas = [
-    {
-      id: 0,
-      img: check,
-      tlList: "Video: ",
-      kelas: "Introduction to HR",
-      det: "12 Menit",
-      bg: "keempat",
-      br: "pertama",
-    },
-    {
-      id: 1,
-      img: playL,
-      tlList: "Video: ",
-      kelas: "Introduction to HR",
-      det: "12 Menit",
-      bg: "white",
-      br: "kedua",
-    },
-    {
-      id: 1,
-      img: playL,
-      tlList: "Video: ",
-      kelas: "Introduction to HR",
-      det: "12 Menit",
-      bg: "white",
-      br: "kedua",
-    },
-    {
-      id: 2,
-      img: playL,
-      tlList: "Video: ",
-      kelas: "Introduction to HR",
-      det: "12 Menit",
-      bg: "white",
-      br: "kedua",
-    },
-    {
-      id: 3,
-      img: playL,
-      tlList: "Video: ",
-      kelas: "Introduction to HR",
-      det: "12 Menit",
-      bg: "white",
-      br: "kedua",
-    },
-    {
-      id: 4,
-      img: playL,
-      tlList: "Video: ",
-      kelas: "Introduction to HR",
-      det: "12 Menit",
-      bg: "white",
-      br: "kedua",
-    },
-    {
-      id: 5,
-      img: rangkum,
-      tlList: "Rangkuman: ",
-      kelas: "Introduction to HR",
-      det: "12 Menit",
-      bg: "white",
-      br: "kedua",
-    },
-    {
-      id: 6,
-      img: quiz,
-      tlList: "Quiz: ",
-      kelas: "Introduction to HR",
-      det: "12 Menit",
-      bg: "white",
-      br: "kedua",
-    },
-  ];
-
   return (
     <>
-      <main className="flex w-dvw flex-row h-max box-border bg-white max-sm:flex-col">
-        <section className="w-full h-full box-border">
-          <div className="flex border border-primary-100 w-full px-28   h-125  bg-red justify-center  bg-black max-sm:h-50 max-sm:px-9  ">
-            <div className="border border-none  w-full h-full bg-gray-600 items-center flex justify-center">
-              <img
-                className="w-25 h-25 max-sm:w-8 max-sm:h-8 "
-                src={PlayB}
-                alt="Play "
-              />
-            </div>
-          </div>
-          <div className="max-w-full mx-auto mt-10 p-20 bg-white  rounded-2xl">
-            <div className="flex flex-col gap-2">
-              <h1 className="text-lg font-bold ">Download Rangkuman Modul!</h1>
-              <p className="text-gray-600">
-                Silahkan download rangkuman modul dari materi yang telah kamu
-                pelajari
+      <Container>
+        <main className="flex max-sm:w-17/20 w-full  flex-row h-max box-border  max-sm:flex-col justify-center">
+          <section className="max-w-260 gap-9 w-full mt-25 mb-16 max-sm:mt-22 max-sm:mb-5 max-sm:mx-7 flex flex-col justify-center items-center box-border ">
+            <div className="w-full flex">
+              <p className="overflow-hidden text-ellipsis whitespace-nowrap w-64 text-kelima ">
+                Beranda / Desain / Gapai Karier Impianmu sebagai Seorang UI/UX
+                Designer & Product Manager.
               </p>
+              <p className="text-kelima"> / </p>
+              <p>Sertifikat</p>
             </div>
-            <a className="flex gap-4 px-7 py-3 border items-center border-pertama w-max rounded-xl mt-5">
-              <img className=" h-4" src={Down} />
-              <p className="text-pertama text-semibold">Download Rangkuman</p>
-            </a>
-          </div>
-          <Footer1
-            left="Sebelumnya"
-            right="Selanjutnya"
-            dis="flex"
-            disp="hidden"
-          />
-        </section>
 
-        <ListKelas dataKelas={dataKelas} />
-      </main>
+            <div className="w-full  h-full  p-6 flex flex-col gap-9 bg-white border border-kedua rounded-lg box-border">
+              <div className="flex bg-keempat h-max max-h-90  max-sm:h-60 w-full justify-center items-center rounded-lg">
+                <img
+                  className=" w-full h-full max-w-100  max-sm:h-50"
+                  src={Serti}
+                  alt="Play "
+                />
+              </div>
+
+              <div className="flex justify-between max-sm:flex-col gap-6">
+                <div className="max-w-full flex flex-col gap-3">
+                  <div>
+                    <h6 className="text-base font-semibold mb-2">
+                      Big 4 Auditor Financial Analyst
+                    </h6>
+                    <p className="text-sm text-kelima font-medium ">
+                      Mulai transformasi dengan instruktur profesional, harga
+                      yang terjangkau, dan kurikulum terbaik
+                    </p>
+                  </div>
+
+                  <div className="flex flex-row gap-3 items-center">
+                    <img className="h-10 w-10" src={imgU}></img>
+                    <div className="flex flex-col">
+                      <p className="font-medium text-base ">Jenna Ortega</p>
+                      <div className="flex flex-row gap-1">
+                        <p className="text-kelima text-sm ">
+                          Senior Accountant di
+                        </p>
+                        <p className="text-sm font-semibold text-kelima ">
+                          {" "}
+                          Gojek
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex gap-2 items-center ">
+                    <div className="flex gap-2 items-center ">
+                      <MdOutlineStar className="text-yellow-300" size={24} />
+                      <MdOutlineStar className="text-yellow-300" size={24} />
+                    </div>
+
+                    <div className=" w-6 h-6">
+                      <MdOutlineStar className=" text-gray-300" size={24}>
+                        <div className="absolute overflow-hidden w-1/2">
+                          <MdOutlineStar
+                            className=" text-yellow-300"
+                            size={24}
+                          />
+                        </div>
+                      </MdOutlineStar>
+                    </div>
+                    <MdOutlineStar className="text-gray-300" size={24} />
+                    <MdOutlineStar className="text-gray-300" size={24} />
+                    <p className="text-kelima text-sm font-medium">3.5 (86)</p>
+                  </div>
+                </div>
+                <a className="flex gap-4 px-6.5 py-2.5 justify-center border h-max items-center border-pertama w-max max-sm:w-full rounded-xl ">
+                  <img className=" h-4" src={Down} />
+                  <p className="text-pertama font-semibold text-normal">
+                    Download Sertifikat
+                  </p>
+                </a>
+              </div>
+            </div>
+          </section>
+        </main>
+      </Container>
     </>
   );
 }

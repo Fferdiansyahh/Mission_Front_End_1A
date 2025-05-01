@@ -1,14 +1,18 @@
+import { useContext } from "react";
 import VideoBelajarLogo from "../../assets/Logo_Video_ Belajar.png";
 import LogoProfile from "../../assets/u-3.png";
-import "../login/Login.css";
+
 import "./Navbar.css";
+import { AuthContext } from "../../data/authContext";
 
 export default function Navbar1() {
+  const { isLoggedIn, logout } = useContext(AuthContext);
+
   return (
     <nav className="navbar">
       <div className="n">
         <div className="n-1">
-          <a href="/Home.html">
+          <a href="/ ">
             <img
               src={VideoBelajarLogo}
               alt="videobelajar logo"
@@ -18,37 +22,37 @@ export default function Navbar1() {
         </div>
         <div className="n-2">
           <div className="n-2-1">
-            <a href="/Kategori.html">
-              <p>Kategori</p>
+            <a href="/kategori">
+              <p className="text-kelima">Kategori</p>
             </a>
-            <img src={LogoProfile} alt="#" />
+            {isLoggedIn ? (
+              <>
+                <img src={LogoProfile} alt="#" />
+                <a
+                  onClick={logout}
+                  href="/login"
+                  className="bg-pertama font-bold py-2 px-6 rounded-lg hover:bg-green-600 transition"
+                >
+                  <p className="text-white">Logout</p>
+                </a>
+              </>
+            ) : (
+              <div className="flex gap-4">
+                <a
+                  href="/login"
+                  className="bg-pertama font-bold py-2 px-6 rounded-lg hover:bg-green-600 transition"
+                >
+                  <p className="text-white">Login</p>
+                </a>
+                <a
+                  href="/register"
+                  className="border border-pertama text-pertama font-bold py-2 px-6 rounded-lg hover:bg-green-50 transition"
+                >
+                  <p className="text-pertama">Register</p>
+                </a>
+              </div>
+            )}
           </div>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-          >
-            <span className="navbar-toggler-icon" />
-          </button>
-          {/* <div
-            className="offcanvas offcanvas-end"
-            tabIndex={-1}
-            id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel"
-          >
-            <div className="offcanvas-header">
-              <img src={LogoProfile} alt="#" />
-              <p>Kategori</p>
-              <button
-                type="button"
-                className="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              />
-            </div>
-          </div> */}
         </div>
       </div>
     </nav>
