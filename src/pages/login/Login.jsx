@@ -78,6 +78,7 @@ export default function Login() {
               name="email"
               value={formData.email}
               onChange={handleChange}
+              placeholder="user@mail.com"
               required
             />
           </div>
@@ -93,6 +94,7 @@ export default function Login() {
                 name="password"
                 value={formData.password}
                 onChange={handleChange}
+                placeholder="12345678"
                 required
               />
               <span
