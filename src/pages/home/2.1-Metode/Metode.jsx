@@ -5,8 +5,9 @@ import DetailProductBuy from "../1.3-Detail-Product/DetailProductBuy/DetailProdu
 import MetodeBayar from "./MetodeBayar/MetodeBayar";
 import Rincian from "./Rincian/Rincian";
 import Container from "../../navbar/Container";
-import Stepper from "../1.2-All-Product/components/stepper";
+
 import useActivePage from "../../../data/useActivePage";
+import Stepper from "../1.2-All-Product/components/stepper";
 
 export default function Metode() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 500);

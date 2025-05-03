@@ -5,11 +5,11 @@ import LogoProfile from "../../assets/u-3.png";
 import "./Navbar.css";
 import { AuthContext } from "../../data/authContext";
 import { useLocation } from "react-router-dom";
-import Stepper from "../home/1.2-All-Product/components/stepper";
 
 import useActivePage from "../../data/useActivePage";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdLogout } from "react-icons/md";
+import Stepper from "../home/1.2-All-Product/components/stepper";
 
 export default function Navbar1() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
