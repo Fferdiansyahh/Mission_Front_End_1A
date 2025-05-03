@@ -8,8 +8,8 @@ import Rincian from "../2.1-Metode/Rincian/Rincian";
 import Time from "../2.1-Metode/Time";
 import Container from "../../navbar/Container";
 import useActivePage from "../../../data/useActivePage";
+import Stepper from "../1.2-All-Product/components/Stepper1";
 
-import Stepper from "../1.2-All-Product/components/stepper";
 
 export default function Bayar() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 500);

@@ -9,7 +9,7 @@ import { useLocation } from "react-router-dom";
 import useActivePage from "../../data/useActivePage";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdLogout } from "react-icons/md";
-import Stepper from "../home/1.2-All-Product/components/stepper";
+import Stepper from "../home/1.2-All-Product/components/Stepper1";
 
 export default function Navbar1() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -4,8 +4,6 @@ import { GoCheck } from "react-icons/go";
 export default function Stepper({ activePage }) {
   const pages = ["metode", "ubah-metode", "bayar", "detail-pembayaran"];
 
-  
-
   const getStepStatus = (page) => {
     if (pages.indexOf(page) < pages.indexOf(activePage)) {
       return "completed";
