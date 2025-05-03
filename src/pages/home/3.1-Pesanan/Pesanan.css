@@ -1,9 +1,5 @@
-.kat {
-  padding: 120px 55px 40px;
-}
-
 .pesanan {
-  padding: 60px 60px 80px;
+  padding: 60px 120px 80px;
   justify-items: center;
   display: flex;
   gap: 40px;
@@ -249,9 +245,6 @@ p {
 }
 
 @media (max-width: 500px) {
-  .kat {
-    padding: 100px 25px 40px;
-  }
   .pesanan {
     flex-direction: column;
     padding: 30px 28px 20px;

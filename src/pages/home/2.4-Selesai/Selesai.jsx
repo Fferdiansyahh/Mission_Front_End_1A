@@ -7,6 +7,7 @@ import DetailProductBuy from "../1.3-Detail-Product/DetailProductBuy/DetailProdu
 import MetodeBayar from "../2.1-Metode/MetodeBayar/MetodeBayar";
 import Rincian from "../2.1-Metode/Rincian/Rincian";
 import Container from "../../navbar/Container";
+import Stepper from "../1.2-All-Product/components/stepper";
 
 export default function Selesai(props) {
   const {

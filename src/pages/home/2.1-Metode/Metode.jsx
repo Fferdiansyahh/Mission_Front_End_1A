@@ -5,6 +5,8 @@ import DetailProductBuy from "../1.3-Detail-Product/DetailProductBuy/DetailProdu
 import MetodeBayar from "./MetodeBayar/MetodeBayar";
 import Rincian from "./Rincian/Rincian";
 import Container from "../../navbar/Container";
+import Stepper from "../1.2-All-Product/components/stepper";
+import useActivePage from "../../../data/useActivePage";
 
 export default function Metode() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 500);
@@ -20,9 +22,13 @@ export default function Metode() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  const activePage = useActivePage();
   return (
     <>
       <Container>
+        <div className="hidden max-sm:block w-full  mt-25">
+          <Stepper activePage={activePage} />
+        </div>
         <div className="met-des">
           <div className="met">
             <MetodeBayar mete="Metode Pembayaran" display="none" />

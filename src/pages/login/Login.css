@@ -89,6 +89,8 @@ body {
 }
 
 .beranda-2 {
+  display: flex;
+  flex-direction: column;
   background-color: none;
   padding: 40px 0px;
   height: max-content;
@@ -96,6 +98,7 @@ body {
   width: 100%;
   margin: 20px 0px;
   box-sizing: border-box;
+  gap: 32px;
 }
 
 .b-2-1 {
@@ -359,9 +362,9 @@ h5 {
 
 .footer {
   height: max-content;
-  width: 100vw;
+  width: 100%;
   font-family: "DM Sans";
-  /* padding: 82px 180px 64px 180px; */
+  padding: 64px 120px;
   align-items: center;
   background-color: white;
   border: 1px solid hsla(265, 10%, 23%, 0.122);
@@ -387,6 +390,9 @@ h5 {
   width: 400px;
   margin-bottom: 10px;
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .f-1-1-1 h3 {
@@ -401,7 +407,7 @@ h5 {
 
 .f-1-1-1 p {
   font-size: 15px;
-  margin: 12px 0px;
+
   font-family: "DM Sans";
   font-weight: 500;
   color: #333333ad;
@@ -451,6 +457,7 @@ h5 {
   padding: 3px;
   border-radius: 100%;
   text-align: center;
+  justify-items: center;
   box-sizing: border-box;
 }
 

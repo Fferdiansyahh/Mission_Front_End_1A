@@ -3,9 +3,10 @@ import LogoInstagram from "../../assets/ig.png";
 import LogoIn from "../../assets/in.png";
 import LogoFacebook from "../../assets/fb.png";
 import LogoX from "../../assets/x.png";
+import "../login/Login.css";
 
 export default function Footer(props) {
-const {dis="block"} = props
+  const { dis = "block" } = props;
 
   return (
     <div style={{ display: dis }} className="footer">
@@ -13,7 +14,7 @@ const {dis="block"} = props
       <div className="f-1">
         <div className="f-1-1">
           <div className="f-1-1-1">
-            <div>
+            <div className="mb-1">
               <img src={LogoBelajar} />
             </div>
             <h3>

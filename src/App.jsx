@@ -18,6 +18,8 @@ import Rangkuman from "./pages/kelas/4.10-Rangkuman/Rangkuman";
 import Try from "./pages/kelas/4.7-Congrats/Try";
 import Sertifikat from "./pages/kelas/4.12-Sertifikat/Sertifikat";
 import { AuthProvider, useAuth } from "./data/authContext";
+import ProfilSaya from "./pages/home/3.1-Pesanan/ProfilSaya";
+import KelasSaya from "./pages/home/3.1-Pesanan/KelasSaya";
 
 // Komponen untuk proteksi route
 function ProtectedRoute({ children }) {
@@ -81,6 +83,22 @@ export default function App() {
             element={
               <ProtectedRoute>
                 <Pesanan />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/kelas-saya"
+            element={
+              <ProtectedRoute>
+                <KelasSaya />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/profil-saya"
+            element={
+              <ProtectedRoute>
+                <ProfilSaya />
               </ProtectedRoute>
             }
           />

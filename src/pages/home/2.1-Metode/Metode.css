@@ -1,9 +1,8 @@
 .met-des {
   display: flex;
   flex-direction: row;
-  width: 90vw;
   gap: 36px;
-  margin: 60px 64px;
+  margin: 120px 120px 64px;
   justify-content: space-between;
   box-sizing: border-box;
 }
@@ -28,11 +27,14 @@
 }
 .time {
   display: flex;
+  margin-top: 60px;
   padding: 12px;
   gap: 12px;
   background-color: #fee8d2cc;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  /* position: absolute; */
 }
 
 .time p {
@@ -54,9 +56,8 @@
   .met-des {
     display: flex;
     flex-direction: column-reverse;
-    /* width: 90%; */
     gap: 36px;
-    margin: 28px 20px;
+    margin: 35px 20px 28px;
   }
 
   .met-des-2 {

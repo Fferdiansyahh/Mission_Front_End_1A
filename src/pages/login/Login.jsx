@@ -62,68 +62,71 @@ export default function Login() {
   return (
     <Container>
       <div className="login-container">
-        <form className="form-container" onSubmit={handleSubmit}>
-          <h2>Masuk ke Akun</h2>
-          <p>Yuk, lanjutin belajarmu di videobelajar.</p>
+        <div className="form-container">
+          <form onSubmit={handleSubmit}>
+            <h2>Masuk ke Akun</h2>
+            <p>Yuk, lanjutin belajarmu di videobelajar.</p>
 
-          {error && <div className="error-message">{error}</div>}
+            {error && <div className="error-message">{error}</div>}
 
-          <div className="form-group">
-            <label htmlFor="email">
-              E-Mail <span style={{ color: "red" }}>*</span>
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="user@mail.com"
-              required
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="password">
-              Kata Sandi <span style={{ color: "red" }}>*</span>
-            </label>
-            <div className="relative ">
+            <div className="form-group">
+              <label htmlFor="email">
+                E-Mail <span style={{ color: "red" }}>*</span>
+              </label>
               <input
-                type={passwordVisible ? "text" : "password"}
-                id="password"
-                name="password"
-                value={formData.password}
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
                 onChange={handleChange}
-                placeholder="12345678"
+                placeholder="user@mail.com"
                 required
               />
-              <span
-                onClick={togglePasswordVisibility}
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 cursor-pointer"
-              >
-                <img
-                  src={passwordVisible ? HidePass : ShowPass}
-                  alt={
-                    passwordVisible
-                      ? "Sembunyikan password"
-                      : "Tampilkan password"
-                  }
-                  className="w-5 h-5"
-                />
-              </span>
             </div>
-            <a href="#" className="forgot-password">
-              Lupa Password?
-            </a>
-          </div>
 
-          <button type="submit" className="login-button" disabled={isLoading}>
-            {isLoading ? "Memproses..." : "Masuk"}
-          </button>
+            <div className="form-group">
+              <label htmlFor="password">
+                Kata Sandi <span style={{ color: "red" }}>*</span>
+              </label>
+              <div className="relative ">
+                <input
+                  type={passwordVisible ? "text" : "password"}
+                  id="password"
+                  name="password"
+                  value={formData.password}
+                  onChange={handleChange}
+                  placeholder="12345678"
+                  required
+                />
+                <span
+                  onClick={togglePasswordVisibility}
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 cursor-pointer"
+                >
+                  <img
+                    src={passwordVisible ? HidePass : ShowPass}
+                    alt={
+                      passwordVisible
+                        ? "Sembunyikan password"
+                        : "Tampilkan password"
+                    }
+                    className="w-5 h-5"
+                  />
+                </span>
+              </div>
+              <a href="#" className="forgot-password">
+                Lupa Password?
+              </a>
+            </div>
 
-          <div className="register-prompt">
-            Belum punya akun? <a href="/register">Daftar</a>
-          </div>
+            <button type="submit" className="login-button" disabled={isLoading}>
+              {isLoading ? "Memproses..." : "Masuk"}
+            </button>
+          </form>
+          <a href="/register">
+            <button type="button" className="register-button">
+              Daftar
+            </button>
+          </a>
 
           <div className="divider">atau</div>
 
@@ -131,7 +134,7 @@ export default function Login() {
             <img src={LogoGoogle} alt="Google Logo" className="google-logo" />
             Masuk dengan Google
           </button>
-        </form>
+        </div>
       </div>
     </Container>
   );
