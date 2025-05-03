@@ -10,7 +10,6 @@ import Container from "../../navbar/Container";
 import useActivePage from "../../../data/useActivePage";
 import Stepper from "../1.2-All-Product/components/stepper";
 
-
 export default function Bayar() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 500);
 
