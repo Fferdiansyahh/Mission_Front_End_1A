@@ -1,8 +1,6 @@
 import "./Pesanan.css";
 import React, { useState } from "react";
 
-import Home23 from "../home-2/Home23";
-
 import CardImg1 from "../../../assets/card-1.jpeg";
 import CardImg2 from "../../../assets/card-2.jpeg";
 import CardImg3 from "../../../assets/card-3.jpeg";
@@ -23,28 +21,24 @@ import {
   FaChevronDown,
 } from "react-icons/fa";
 
-import Dropdown from "../1.2-All-Product/components/Dropdown/Dropdown";
-
-import DropdownItem from "../1.2-All-Product/components/DropdownItem/DropdownItem";
-import Home21 from "../home-2/Home21";
 import MenuPesanan from "./Menu/MenuPesanan";
-import DetailPesanan from "./DetailPesanan/DetailPesanan";
-import DetailKelas from "./DetailKelas/DetailKelas";
 
 import DetailProfile from "./Profile/DetailProfile";
 import Container from "../../navbar/Container";
+import Search from "./Search/Search";
+import Home22 from "../home-2/Home22";
+import DetailKelas from "./DetailKelas/DetailKelas";
 export default function KelasSaya() {
-  const items = [
-    { id: 0, des: "Harga Rendah" },
-    { id: 1, des: "Harga Tinggi" },
-    { id: 2, des: "A to Z" },
-    { id: 3, des: "Z to A" },
-    { id: 4, des: "Rating Tertinggi" },
-    { id: 5, des: "Rating Terendah" },
+  const item = [
+    {
+      id: 0,
+      tit: "Daftar Pesanan",
+      des: "Infomasi terperenci mengenai pembelian",
+    },
   ];
+
   const dat = [2, 3, 4, 5, 6];
 
-  const itemPesanan = ["Semua Pesanan", "Menunggu", "Berhasil", "Gagal"];
   const itemKelas = ["Semua Kelas", "Sedang Berjalan", "Selesai"];
 
   const data = [
@@ -85,40 +79,17 @@ export default function KelasSaya() {
       <Container>
         <div className="pes">
           <div className="pesanan">
-            <MenuPesanan />
+            <MenuPesanan item={item} />
 
             <div className="pesanan-2">
               <div className="pesanan-2-u">
-                <div className="pesanan-2-u-1">
-                  {/* {itemKelas.map((item) => ( */}
-                  {itemPesanan.map((item) => (
-                    <div className="p-2-u">
-                      <p>{item}</p>
-                    </div>
-                  ))}
-                </div>
-                <div className="pesanan-2-1">
-                  <div className="input-wrapper">
-                    <input placeholder="Cari Kelas"></input>
-                    <FaSearch id="search-icon" />
-                  </div>
-                  <Dropdown
-                    buttonText="Urutkan"
-                    content={
-                      <>
-                        {items.map((item) => (
-                          <DropdownItem key={item.id}>{item.des}</DropdownItem>
-                        ))}
-                      </>
-                    }
-                  />
-                </div>
+                <Home22 categories={itemKelas} wd="full" />
+                <Search />
               </div>
               <div className="pesanan-2-2">
-                {/* <DetailPesanan /> */}
-                {/* <DetailKelas /> */}
+                <DetailKelas />
               </div>
-                <DetailProfile />
+
               <div className="pesanan-2-3">
                 <a className="pesanan-2-3-1">
                   <FaChevronLeft className="icon-page" />

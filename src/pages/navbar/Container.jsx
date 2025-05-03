@@ -14,14 +14,14 @@ export default function Container({ children }) {
   const shouldHideFooter =
     location.pathname === "/login" || location.pathname === "/register";
   return (
-    <div className="flex flex-col max-w-screen-xl     ">
-      {/* <NavbarKelas /> */}
-      <Navbar1 isLoggedIn={isLoggedIn} />
+    <main className="    ">
+      <NavbarKelas />
+      {/* <Navbar1 isLoggedIn={isLoggedIn} /> */}
 
       {/* <Navbar /> */}
       {children}
       {/* <Footer1 dis="hidden" disp="flex" /> */}
       {!shouldHideFooter && <Footer dis="block" />}
-    </div>
+    </main>
   );
 }

@@ -16,7 +16,6 @@ import CardImgU4 from "../../../assets/u-4.png";
 import CardImgU5 from "../../../assets/u-5.png";
 import CardImgU6 from "../../../assets/u-6.png";
 import {
-  FaSearch,
   FaChevronLeft,
   FaChevronRight,
   FaChevronUp,
@@ -33,92 +32,37 @@ import DetailKelas from "./DetailKelas/DetailKelas";
 
 import DetailProfile from "./Profile/DetailProfile";
 import Container from "../../navbar/Container";
+import Home22 from "../home-2/Home22";
+import Search from "./Search/Search";
 export default function Pesanan() {
-  const items = [
-    { id: 0, des: "Harga Rendah" },
-    { id: 1, des: "Harga Tinggi" },
-    { id: 2, des: "A to Z" },
-    { id: 3, des: "Z to A" },
-    { id: 4, des: "Rating Tertinggi" },
-    { id: 5, des: "Rating Terendah" },
-  ];
   const dat = [2, 3, 4, 5, 6];
 
   const itemPesanan = ["Semua Pesanan", "Menunggu", "Berhasil", "Gagal"];
-  const itemKelas = ["Semua Kelas", "Sedang Berjalan", "Selesai"];
 
-  const data = [
+  const item = [
     {
       id: 0,
-      cardImg: CardImg1,
-      CardImgU: CardImgU1,
-    },
-    {
-      id: 1,
-      cardImg: CardImg2,
-      CardImgU: CardImgU2,
-    },
-    {
-      id: 2,
-      cardImg: CardImg3,
-      CardImgU: CardImgU3,
-    },
-    {
-      id: 3,
-      cardImg: CardImg4,
-      CardImgU: CardImgU4,
-    },
-    {
-      id: 4,
-      cardImg: CardImg5,
-      CardImgU: CardImgU5,
-    },
-    {
-      id: 5,
-      cardImg: CardImg6,
-      CardImgU: CardImgU6,
+      tit: "Daftar Pesanan",
+      des: "Infomasi terperenci mengenai pembelian",
     },
   ];
-
   return (
     <>
       <Container>
         <div className="pes">
           <div className="pesanan">
-            <MenuPesanan />
+            <MenuPesanan item={item} />
 
             <div className="pesanan-2">
-              <div className="pesanan-2-u">
-                <div className="pesanan-2-u-1">
-                  {/* {itemKelas.map((item) => ( */}
-                  {itemPesanan.map((item) => (
-                    <div className="p-2-u">
-                      <p>{item}</p>
-                    </div>
-                  ))}
-                </div>
-                <div className="pesanan-2-1">
-                  <div className="input-wrapper">
-                    <input placeholder="Cari Kelas"></input>
-                    <FaSearch id="search-icon" />
-                  </div>
-                  <Dropdown
-                    buttonText="Urutkan"
-                    content={
-                      <>
-                        {items.map((item) => (
-                          <DropdownItem key={item.id}>{item.des}</DropdownItem>
-                        ))}
-                      </>
-                    }
-                  />
-                </div>
+              <div className="flex">
+                <Home22 categories={itemPesanan} wd="full" />
+                <Search />
               </div>
               <div className="pesanan-2-2">
-                {/* <DetailPesanan /> */}
+                <DetailPesanan />
                 {/* <DetailKelas /> */}
               </div>
-                <DetailProfile />
+              {/* <DetailProfile /> */}
               <div className="pesanan-2-3">
                 <a className="pesanan-2-3-1">
                   <FaChevronLeft className="icon-page" />

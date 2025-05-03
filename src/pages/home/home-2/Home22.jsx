@@ -1,19 +1,22 @@
 import "../../login/Login.css";
 import React, { useState, useRef, useEffect } from "react";
 
-export default function Home22() {
+export default function Home22(props) {
   const [activeCategory, setActiveCategory] = useState("Semua Kelas");
   const [underlineWidth, setUnderlineWidth] = useState(0);
   const [underlineOffset, setUnderlineOffset] = useState(0);
   const categoryRefs = useRef({});
 
-  const categories = [
-    "Semua Kelas",
-    "Pemasaran",
-    "Desain",
-    "Pengembangan Diri",
-    "Bisnis",
-  ];
+  const {
+    wd = "dvw",
+    categories = [
+      "Semua Kelas",
+      "Pemasaran",
+      "Desain",
+      "Pengembangan Diri",
+      "Bisnis",
+    ],
+  } = props;
 
   useEffect(() => {
     if (categoryRefs.current[activeCategory]) {
@@ -27,7 +30,9 @@ export default function Home22() {
     setActiveCategory(category);
   };
   return (
-    <div className="flex items-center space-x-6 relative overflow-x-auto scrollbar-hide whitespace-nowrap py-2 w-dvw">
+    <div
+      className={`flex items-center space-x-6 relative overflow-x-auto scrollbar-hide whitespace-nowrap py-2 w-${wd}`}
+    >
       {categories.map((category) => (
         <div
           key={category}

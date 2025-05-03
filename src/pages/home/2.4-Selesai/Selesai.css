@@ -11,14 +11,14 @@
 }
 
 .done {
-  width: 100%;
+  width: 100vw;
   justify-items: center;
 }
 
 .done-1 {
   border: #3a35411f 1px solid;
   background-color: white;
-  margin: 66px 100px 128px;
+  margin: 126px 100px 128px;
   padding: 0px 36px 64px;
   display: flex;
   flex-direction: column;
@@ -39,7 +39,6 @@
 .text {
   color: #333333ad;
 }
-
 
 @media (max-width: 500px) {
   .done {

@@ -8,6 +8,7 @@ import playL from "../../../assets/play-l.svg";
 import check from "../../../assets/check.svg";
 import rangkum from "../../../assets/book.svg";
 import quiz from "../../../assets/quiz.svg";
+import Container from "../../navbar/Container";
 
 export default function Kelas() {
   const dataKelas = [
@@ -87,8 +88,9 @@ export default function Kelas() {
 
   return (
     <>
+      {/* <Container> */}
       <div>
-        <main className="flex flex-row w-dvw h-max box-border bg-white max-sm:flex-col">
+        <main className="flex flex-row w-screen h-max box-border bg-white max-sm:flex-col">
           <section className="w-full h-full box-border">
             <div className="flex border border-primary-100 w-full px-28   h-125  bg-red justify-center  bg-black max-sm:h-50 max-sm:px-9  ">
               <div className="border border-none  w-full h-full bg-gray-600 items-center flex justify-center">
@@ -111,6 +113,7 @@ export default function Kelas() {
           <ListKelas dataKelas={dataKelas} />
         </main>
       </div>
+      {/* </Container> */}
     </>
   );
 }

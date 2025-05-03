@@ -16,8 +16,8 @@ export default function Sertifikat() {
   return (
     <>
       <Container>
-        <main className="flex max-sm:w-17/20 w-full  flex-row h-max box-border  max-sm:flex-col justify-center">
-          <section className="max-w-260 gap-9 w-full mt-25 mb-16 max-sm:mt-22 max-sm:mb-5 max-sm:mx-7 flex flex-col justify-center items-center box-border ">
+        <main className="flex  max-sm:w-full w-dvw  flex-row h-max box-border  max-sm:flex-col justify-center">
+          <section className="max-w-260 gap-9  mt-25 mb-16 max-sm:mt-22 max-sm:mb-5 max-sm:mx-7 flex flex-col justify-center items-center box-border ">
             <div className="w-full flex">
               <p className="overflow-hidden text-ellipsis whitespace-nowrap w-64 text-kelima ">
                 Beranda / Desain / Gapai Karier Impianmu sebagai Seorang UI/UX

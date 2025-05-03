@@ -12,16 +12,19 @@ import SoalPretest from "./DetailSoal/SoalPretest.jsx";
 import SoalQuiz from "./DetailSoal/SoalQuiz.jsx";
 import PopupDone from "../../navbar/components/PopupDone.jsx";
 import PopupReview from "../../navbar/components/PopupReview.jsx";
+import Container from "../../navbar/Container.jsx";
 
 export default function Soal() {
   return (
     <>
-      <div>
-        {/* <SoalQuiz /> */}
-        <SoalPretest />
-        {/* <PopupDone /> */}
-        {/* <PopupReview /> */}
-      </div>
+      <Container>
+        <div>
+          {/* <SoalQuiz /> */}
+          <SoalPretest />
+          {/* <PopupDone /> */}
+          {/* <PopupReview /> */}
+        </div>
+      </Container>
     </>
   );
 }

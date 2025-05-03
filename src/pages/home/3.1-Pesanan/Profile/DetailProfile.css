@@ -18,7 +18,6 @@
   width: 362px;
   border: 1px solid #3a35411f;
   background-color: white;
-  border-radius: 10px;
 
   display: flex;
   flex-direction: column;
@@ -43,7 +42,9 @@
   flex-direction: column;
   gap: 20px;
   padding: 20px;
+  border-radius: 10px;
   border: #3a35411f solid 1px;
+  background-color: white;
 }
 
 .d-pr-1-1 h2 {

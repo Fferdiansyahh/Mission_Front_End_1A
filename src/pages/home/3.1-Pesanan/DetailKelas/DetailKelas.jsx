@@ -8,12 +8,7 @@ import ImgKel from "/src/assets/card-6.jpeg";
 import ImgU from "/src/assets/u-7.png";
 import "./DetailKelas.css";
 
-export default function DetailKelas(props) {
-  const {
-    title = "Daftar Pesanan",
-    des = "Infomasi terperenci mengenai pembelian",
-  } = props;
-
+export default function DetailKelas() {
   const menu = [
     { image: Profile, tit: "Profil Saya" },
     { image: Book, tit: "Kelas Saya" },
@@ -47,14 +42,15 @@ export default function DetailKelas(props) {
       cr: "#FFBD3A",
     },
   ];
-  const { id, dpImg, dpImgU } = props;
+
   return (
     <>
       {detail.map((item) => (
         <div key={item.id} className="d-k-1">
           <div className="d-k-1-3">
             <div className="d-k-1-3-1">
-              <p>{item.modul} /12 Modul </p> <p className="d-k-f">Terselesaikan</p>
+              <p>{item.modul} /12 Modul </p>{" "}
+              <p className="d-k-f">Terselesaikan</p>
             </div>
             <div
               style={{ color: `${item.cr}`, backgroundColor: `${item.bg}` }}
@@ -115,11 +111,17 @@ export default function DetailKelas(props) {
                 </div>
               </div>
             </div>
-            <div className="d-k-1-2-btn">
-              <button className="k-btn-1">Unduh Sertifikat</button>
-              <button className="k-btn-2">Lihat Kelas Detail</button>
-              {/* <button className="k-btn-3">Lanjutan pembelajaran</button> */}
-            </div>
+
+            {item.pg === 100 ? (
+              <div className="d-k-1-2-btn">
+                <button className="k-btn-1">Unduh Sertifikat</button>
+                <button className="k-btn-2">Lihat Kelas Detail</button>
+              </div>
+            ) : (
+              <a href="/kelas">
+                <button className="k-btn-3">Lanjutan pembelajaran</button>
+              </a>
+            )}
           </div>
         </div>
       ))}

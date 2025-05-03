@@ -16,7 +16,12 @@ export default function Navbar1() {
   const { isLoggedIn, logout } = useContext(AuthContext);
   const location = useLocation();
   const hideLoginRegister =
-    location.pathname === "/login" || location.pathname === "/register";
+    location.pathname === "/login" ||
+    location.pathname === "/register" ||
+    location.pathname === "/metode" ||
+    location.pathname === "/ubah-metode" ||
+    location.pathname === "/bayar" ||
+    location.pathname === "/detail-pembayaran";
 
   const activePage = useActivePage();
 
