@@ -13,10 +13,20 @@ export default function Container({ children }) {
   const location = useLocation();
   const shouldHideFooter =
     location.pathname === "/login" || location.pathname === "/register";
+
+  const hideNavbarKelas = [
+    "/kelas",
+    "/soal",
+    "/aturan",
+    "/congrats",
+    "/try",
+    "/rangkuman",
+  ].includes(location.pathname);
+
   return (
     <main className="    ">
-      <NavbarKelas />
-      {/* <Navbar1 isLoggedIn={isLoggedIn} /> */}
+      {hideNavbarKelas && <NavbarKelas />}
+      {!hideNavbarKelas && <Navbar1 isLoggedIn={isLoggedIn} />}
 
       {/* <Navbar /> */}
       {children}

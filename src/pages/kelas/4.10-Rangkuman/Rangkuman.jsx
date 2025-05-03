@@ -9,6 +9,7 @@ import rangkum from "../../../assets/book.svg";
 import quiz from "../../../assets/quiz.svg";
 
 import Down from "../../../assets/dow.png";
+import Container from "../../navbar/Container";
 
 export default function Rangkuman() {
   const dataKelas = [
@@ -88,40 +89,44 @@ export default function Rangkuman() {
 
   return (
     <>
-      <main className="flex w-dvw flex-row h-max box-border bg-white max-sm:flex-col">
-        <section className="w-full h-full box-border">
-          <div className="flex border border-primary-100 w-full px-28   h-125  bg-red justify-center  bg-black max-sm:h-50 max-sm:px-9  ">
-            <div className="border border-none  w-full h-full bg-gray-600 items-center flex justify-center">
-              <img
-                className="w-25 h-25 max-sm:w-8 max-sm:h-8 "
-                src={PlayB}
-                alt="Play "
-              />
+      <Container>
+        <main className="flex w-dvw flex-row h-max box-border bg-white max-sm:flex-col">
+          <section className="w-full h-full box-border">
+            <div className="flex border border-primary-100 w-full px-28   h-125  bg-red justify-center  bg-black max-sm:h-50 max-sm:px-9  ">
+              <div className="border border-none  w-full h-full bg-gray-600 items-center flex justify-center">
+                <img
+                  className="w-25 h-25 max-sm:w-8 max-sm:h-8 "
+                  src={PlayB}
+                  alt="Play "
+                />
+              </div>
             </div>
-          </div>
-          <div className="max-w-full mx-auto mt-10 p-20 bg-white  rounded-2xl">
-            <div className="flex flex-col gap-2">
-              <h1 className="text-lg font-bold ">Download Rangkuman Modul!</h1>
-              <p className="text-gray-600">
-                Silahkan download rangkuman modul dari materi yang telah kamu
-                pelajari
-              </p>
+            <div className="max-w-full mx-auto mt-10 p-20 bg-white  rounded-2xl">
+              <div className="flex flex-col gap-2">
+                <h1 className="text-lg font-bold ">
+                  Download Rangkuman Modul!
+                </h1>
+                <p className="text-gray-600">
+                  Silahkan download rangkuman modul dari materi yang telah kamu
+                  pelajari
+                </p>
+              </div>
+              <a className="flex gap-4 px-7 py-3 border items-center border-pertama w-max rounded-xl mt-5">
+                <img className=" h-4" src={Down} />
+                <p className="text-pertama text-semibold">Download Rangkuman</p>
+              </a>
             </div>
-            <a className="flex gap-4 px-7 py-3 border items-center border-pertama w-max rounded-xl mt-5">
-              <img className=" h-4" src={Down} />
-              <p className="text-pertama text-semibold">Download Rangkuman</p>
-            </a>
-          </div>
-          <Footer1
-            left="Sebelumnya"
-            right="Selanjutnya"
-            dis="flex"
-            disp="hidden"
-          />
-        </section>
+            <Footer1
+              left="Sebelumnya"
+              right="Selanjutnya"
+              dis="flex"
+              disp="hidden"
+            />
+          </section>
 
-        <ListKelas dataKelas={dataKelas} />
-      </main>
+          <ListKelas dataKelas={dataKelas} />
+        </main>
+      </Container>
     </>
   );
 }
