@@ -1,33 +1,34 @@
 import React, { useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-export default function DetailSoal(props) {
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [selectedOptions, setSelectedOptions] = useState({});
+import PopupDone from "../../../navbar/components/PopupDone";
 
-  const { questions = [] } = props;
+export default function DetailSoal(props) {
+  const {
+    currentQuestionIndex,
+    questions,
+    selectedOptions,
+    handleOptionSelect,
+    handleNext,
+    handlePrevious,
+    handleNextClick,
+  } = props;
 
   const currentQuestion = questions[currentQuestionIndex];
+  const isAllAnswered =
+    Object.keys(selectedOptions).length === questions.length;
 
-  const handleOptionSelect = (optionId) => {
-    setSelectedOptions({
-      ...selectedOptions,
-      [currentQuestionIndex]: optionId,
-    });
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const openPopup = () => {
+    setIsPopupOpen(true);
   };
 
-  const handleNext = () => {
-    if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
-    }
+  const isLastQuestion = currentQuestionIndex === questions.length - 1;
+  const canShowPopup = isLastQuestion && isAllAnswered;
+  const canGoNext = !isLastQuestion;
+  const closePopup = () => {
+    setIsPopupOpen(false);
   };
-
-  const handlePrevious = () => {
-    if (currentQuestionIndex > 0) {
-      setCurrentQuestionIndex(currentQuestionIndex - 1);
-    }
-  };
-
   return (
     <section>
       <div className="flex flex-col  justify-between max-w-168 h-full py-9 max-sm:py-6  px-16 max-sm:px-6 bg-white  border border-kedua ">
@@ -97,21 +98,33 @@ export default function DetailSoal(props) {
           </a>
 
           <a
-            onClick={handleNext}
-            disabled={currentQuestionIndex === questions.length - 1}
+            onClick={handleNextClick}
+            disabled={!isAllAnswered}
             className={`flex flex-row items-center w-full  justify-center gap-2 px-4 py-2 rounded-xl transition-colors border border-pertama ${
-              currentQuestion.id < 10
-                ? "bg-pertama text-gray-400 hover:cursor-pointer  "
-                : "bg-yellow-300 hover:bg-yellow-400 hover:cursor-pointer border-amber-300"
+              isAllAnswered
+                ? "bg-yellow-300 hover:bg-yellow-400 hover:cursor-pointer border-amber-300"
+                : "bg-pertama text-gray-400 hover:cursor-pointer  "
             }`}
           >
-            <p className="text-white font-bold  textbase">{`${
-              currentQuestion.id < 10 ? "Selanjutnya" : "Selesaikan"
-            }`}</p>
+            <p className="text-white font-bold  textbase">
+              {isAllAnswered ? "Selesaikan" : "Selanjutnya"}
+            </p>
             <FaArrowRight className="text-white" />
           </a>
         </div>
       </div>
+      {/* {isPopupOpen && <PopupDone isOpen={isPopupOpen} onClose={closePopup} />} */}
+      {/* {isPopupOpen && (
+        <PopupDone
+          isOpen={isPopupOpen}
+          onClose={closePopup}
+          onConfirm={(hasilUjian) => {
+            setHasilUjian(hasilUjian); // Menyimpan hasil ujian di state
+            navigate("/result", { state: { hasilUjian } }); // Navigasi ke halaman hasil
+          }}
+          selectedOptions={selectedOptions}
+        />
+      )} */}
     </section>
   );
 }

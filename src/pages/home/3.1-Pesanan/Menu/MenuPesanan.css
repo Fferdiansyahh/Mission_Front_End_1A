@@ -21,7 +21,6 @@
   flex-direction: column;
   background-color: white;
   margin: 0;
-
   gap: 8px;
 }
 .m-2 a {
@@ -56,5 +55,9 @@ h1 {
 @media (max-width: 500px) {
   .menu-c {
     width: 100% !important;
+  }
+
+  .menu {
+    width: 100lvw !important;
   }
 }

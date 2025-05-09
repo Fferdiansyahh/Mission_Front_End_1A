@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import VideoBelajarLogo from "../../assets/Logo_Video_ Belajar.png";
 import LogoProfile from "../../assets/u-3.png";
 
@@ -10,10 +10,26 @@ import useActivePage from "../../data/useActivePage";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdLogout } from "react-icons/md";
 import Stepper from "../home/1.2-All-Product/components/Stepper1";
+import NotifModul from "./components/NotifModul";
+import { ChevronDownIcon } from "flowbite-react";
 
 export default function Navbar1() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isLoggedIn, logout } = useContext(AuthContext);
+  const [open, setOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   const location = useLocation();
   const hideLoginRegister =
     location.pathname === "/login" ||
@@ -58,13 +74,6 @@ export default function Navbar1() {
                     src={LogoProfile}
                     alt="#"
                   />
-                  {/* <a
-                    onClick={logout}
-                    href="/login"
-                    className="bg-pertama font-bold py-2 px-6 rounded-lg hover:bg-green-600 transition"
-                  >
-                    <p className="text-white">Logout</p>
-                  </a> */}
                 </>
               ) : (
                 <div className="flex gap-4">
@@ -87,13 +96,11 @@ export default function Navbar1() {
 
           {showStepper && activePage && (
             <div className="n-3 block max-sm:hidden">
-              {/* Anda mungkin perlu styling untuk ini */}
               <Stepper activePage={activePage} />
             </div>
           )}
 
           {/* Hamburger Menu */}
-
           <div
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"

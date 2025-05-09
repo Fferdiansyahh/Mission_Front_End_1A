@@ -9,7 +9,7 @@ import { AuthContext } from "../../data/authContext";
 import Container from "../navbar/Container";
 
 export default function Login() {
-  const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState({
     email: "",
     password: "",
   });

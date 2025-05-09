@@ -11,10 +11,18 @@ import { useLocation } from "react-router-dom";
 export default function Container({ children }) {
   const { isLoggedIn } = useContext(AuthContext);
   const location = useLocation();
-  const shouldHideFooter =
-    location.pathname === "/login" || location.pathname === "/register";
+  const shouldHideFooter = ["/login", "/register"].includes(location.pathname);
 
   const hideNavbarKelas = [
+    "/kelas",
+    "/soal",
+    "/aturan",
+    "/congrats",
+    "/try",
+    "/rangkuman",
+  ].includes(location.pathname);
+
+  const hideFooterKelas = [
     "/kelas",
     "/soal",
     "/aturan",
@@ -30,8 +38,8 @@ export default function Container({ children }) {
 
       {/* <Navbar /> */}
       {children}
-      {/* <Footer1 dis="hidden" disp="flex" /> */}
-      {!shouldHideFooter && <Footer dis="block" />}
+      {hideFooterKelas && <Footer1 dis="hidden" disp="flex" />}
+      {hideFooterKelas || (!shouldHideFooter && <Footer dis="block" />)}
     </main>
   );
 }

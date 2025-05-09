@@ -20,6 +20,7 @@ import Sertifikat from "./pages/kelas/4.12-Sertifikat/Sertifikat";
 import { AuthProvider, useAuth } from "./data/authContext";
 import ProfilSaya from "./pages/home/3.1-Pesanan/ProfilSaya";
 import KelasSaya from "./pages/home/3.1-Pesanan/KelasSaya";
+import Result from "./pages/kelas/4.7-Result/Result";
 
 // Komponen untuk proteksi route
 function ProtectedRoute({ children }) {
@@ -151,10 +152,10 @@ export default function App() {
             }
           />
           <Route
-            path="/try"
+            path="/result"
             element={
               <ProtectedRoute>
-                <Try />
+                <Result />
               </ProtectedRoute>
             }
           />

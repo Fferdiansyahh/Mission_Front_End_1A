@@ -5,6 +5,7 @@
   gap: 40px;
   width: 100vw;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 .pesanan-1 {
   border: 1px solid #3a35411f;
@@ -98,7 +99,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  width: 100%;
+  width: 100vw;
   padding: 20px;
   border: #3a35411f solid 1px;
   border-radius: 10px;
@@ -248,8 +249,8 @@ p {
 @media (max-width: 500px) {
   .pesanan {
     flex-direction: column;
-    padding: 30px 28px 20px;
-    width: 100vw;
+    padding: 100px 28px 20px;
+    width: none;
   }
 
   .p-1-1-2 div {
@@ -268,7 +269,7 @@ p {
     display: block !important;
   }
   .pesanan-2 {
-    width: 100%;
+    width: 100lvw;
     box-sizing: border-box;
   }
 

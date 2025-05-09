@@ -54,7 +54,7 @@ export default function Pesanan() {
             <MenuPesanan item={item} />
 
             <div className="pesanan-2">
-              <div className="flex">
+              <div className="flex max-sm:flex-col gap-6">
                 <Home22 categories={itemPesanan} wd="full" />
                 <Search />
               </div>

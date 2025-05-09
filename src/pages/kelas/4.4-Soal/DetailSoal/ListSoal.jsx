@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 
-export default function ListSoal({ activeQuestionId }) {
+export default function ListSoal({
+  activeQuestionId,
+  selectedOptions,
+  onSelectQuestion,
+}) {
   const numbers = Array.from({ length: 10 }, (_, index) => index + 1);
 
   return (
@@ -12,18 +16,18 @@ export default function ListSoal({ activeQuestionId }) {
             {numbers.map((number) => (
               <div
                 key={number}
-                className={`relative w-11.5 h-11.5 flex items-center justify-center rounded border text-black overflow-hidden
+                onClick={() => onSelectQuestion(number)} // Menangani klik soal
+                className={`relative w-11.5 h-11.5 flex items-center justify-center rounded border text-black overflow-hidden cursor-pointer
                   ${
                     number === activeQuestionId
                       ? "bg-orange-100 border-orange-500 text-black"
                       : "bg-white border-gray-300 text-gray-800"
-                  }`}
+                  }
+                  ${selectedOptions[number] ? "border-green-500" : ""}
+                `}
               >
                 {number}
-                {number < activeQuestionId && (
-                  <div className="absolute top-0 right-0 border-t-[17.25px] border-l-[17.25px] border-t-yellow-300 border-l-transparent"></div>
-                )}
-                {number === activeQuestionId && activeQuestionId === 10 && (
+                {selectedOptions[number - 1] && (
                   <div className="absolute top-0 right-0 border-t-[17.25px] border-l-[17.25px] border-t-yellow-300 border-l-transparent"></div>
                 )}
               </div>

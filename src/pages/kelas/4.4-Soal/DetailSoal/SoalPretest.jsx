@@ -1,16 +1,19 @@
-import DetailK from "../../4.1-Kelas/DetailK/DetailK";
 import ListKelas from "../../4.1-Kelas/ListKelas/ListKelas";
 
 import DetailSoal from "../DetailSoal/DetailSoal";
 import ListSoal from "../DetailSoal/ListSoal";
 import "../Soal.css";
-import playL from "/src/assets/play-l.svg";
 import check from "/src/assets/check.svg";
-import rangkum from "/src/assets/book.svg";
 import quiz from "/src/assets/quiz.svg";
 import Footer1 from "../../../navbar/Footer-1";
+import questions from "../../../../data/soal";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import hitungHasilUjian from "../../../../data/hitungHasil";
+import PopupDone from "../../../navbar/components/PopupDone";
 
 export default function SoalPretest() {
+  const [showPopup, setShowPopup] = useState(false);
   const dataKelas = [
     {
       id: 1,
@@ -87,40 +90,83 @@ export default function SoalPretest() {
     },
   ];
 
-  const questions = [
-    {
-      id: 10,
-      question:
-        "Memikirkan dan mengantisipasi secara teliti adanya user secara tidak sengaja mengutak-atik konfigurasi, namun dapat diatasi dengan membuat default yang mengurangi kepanikan pada user adalah pengertian dari ...",
-      options: [
-        { id: 1, text: "Memikirkan tentang default *", isCorrect: false },
-        {
-          id: 2,
-          text: "Mempertimbangkan page layout berdasarkan suatu tujuan tertentu",
-          isCorrect: true,
-        },
-        {
-          id: 3,
-          text: "Memasitkan bahwa sistem berjalan sesuai dengan apa yang terjadi saat itu juga",
-          isCorrect: true,
-        },
-        {
-          id: 4,
-          text: "Menciptakan konsistensi dan menggunakan elemen UI umum",
-          isCorrect: true,
-        },
-      ],
-    },
-  ];
+  const navigate = useNavigate();
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [selectedOptions, setSelectedOptions] = useState({});
+  const handleOptionSelect = (optionId) => {
+    setSelectedOptions((prev) => ({
+      ...prev,
+      [currentQuestionIndex]: optionId,
+    }));
+  };
 
-  const activeQuestionId = questions[0].id;
+  const handleNext = () => {
+    if (Object.keys(selectedOptions).length === questions.length) {
+    } else {
+      setCurrentQuestionIndex((prev) =>
+        Math.min(prev + 1, questions.length - 1)
+      );
+    }
+  };
+
+  const handlePrevious = () => {
+    setCurrentQuestionIndex((prev) => Math.max(prev - 1, 0));
+  };
+
+  const handleSelectQuestion = (questionId) => {
+    const index = questions.findIndex((q) => q.id === questionId);
+    if (index !== -1) {
+      setCurrentQuestionIndex(index);
+    }
+  };
+
+  const handleNextClick = () => {
+    if (isAllAnswered && currentQuestionIndex === questions.length - 1) {
+      setShowPopup(true);
+    } else {
+      handleNext();
+    }
+  };
+
+  const handleOpenPopup = () => {
+    setShowPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
+
+  const handleConfirmSelesai = () => {
+    console.log("Mulai hitungHasilUjian");
+    const hasilPerhitungan = hitungHasilUjian(questions, selectedOptions);
+    console.log("Selesai hitungHasilUjian:", hasilPerhitungan);
+    navigate("/result", { state: { hasilUjian: hasilPerhitungan } });
+    setShowPopup(false);
+  };
+
+  const isAllAnswered =
+    Object.keys(selectedOptions).length === questions.length;
+  const isLastQuestion = currentQuestionIndex === questions.length - 1;
+
   return (
     <>
       <div>
         <main className="flex flex-row w-full h-max box-border bg-white max-sm:flex-col">
-          <ListSoal activeQuestionId={activeQuestionId} />
+          <ListSoal
+            activeQuestionId={questions[currentQuestionIndex].id}
+            selectedOptions={selectedOptions}
+            onSelectQuestion={handleSelectQuestion}
+          />
 
-          <DetailSoal questions={questions} />
+          <DetailSoal
+            currentQuestionIndex={currentQuestionIndex}
+            questions={questions}
+            selectedOptions={selectedOptions}
+            handleOptionSelect={handleOptionSelect}
+            handleNext={handleNext}
+            handlePrevious={handlePrevious}
+            handleNextClick={handleNextClick} // Ki
+          />
           <Footer1
             left="Foundations of User Experience Design"
             right="Foundations of User Experience Design"
@@ -131,6 +177,15 @@ export default function SoalPretest() {
           <ListKelas dataKelas={dataKelas} />
         </main>
       </div>
+
+      {showPopup && (
+        <PopupDone
+          isOpen={showPopup}
+          onClose={handleClosePopup}
+          onConfirm={handleConfirmSelesai} // Kirimkan fungsi ini untuk navigasi
+          selectedOptions={selectedOptions}
+        />
+      )}
     </>
   );
 }

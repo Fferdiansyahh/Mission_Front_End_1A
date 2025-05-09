@@ -21,6 +21,8 @@
   box-sizing: border-box;
   width: 100%;
   height: 60px;
+  position: fixed;
+  z-index: 1000;
 }
 
 .navbar-left {
@@ -69,8 +71,8 @@
 }
 
 .user-avatar {
-  width: 32px;
-  height: 32px;
+  width: 44px;
+  height: 44px;
   border-radius: 5px;
   object-fit: cover;
 }

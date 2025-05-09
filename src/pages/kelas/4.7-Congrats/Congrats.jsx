@@ -4,6 +4,7 @@ import Container from "../../navbar/Container";
 
 
 export default function Congrats() {
+  
   return (
     <>
       <Container>

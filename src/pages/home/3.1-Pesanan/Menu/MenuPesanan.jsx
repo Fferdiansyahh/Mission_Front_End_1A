@@ -45,7 +45,7 @@ export default function MenuPesanan(props) {
                 } hover:bg-green-50`}
               >
                 {getIconByTitle(item.tit, isActive)}
-                <p className={` ${isActive ? "!text-enam" : "text-kedua"} `}>
+                <p className={` ${isActive ? "!text-enam" : "text-tujuh"} `}>
                   {item.tit}
                 </p>
               </a>

@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import PopupReview from "../../../navbar/components/PopupReview";
 
+
 export default function ListKelas(props) {
   const { metodee, display, dataKelas = [] } = props;
   const [isKelasOneOpen, setIsKelasOneOpen] = useState(true);
@@ -107,6 +108,7 @@ export default function ListKelas(props) {
         </p>
       </div>
       {isPopupOpen && <PopupReview isOpen={isPopupOpen} onClose={closePopup} />}
+     
     </main>
   );
 }

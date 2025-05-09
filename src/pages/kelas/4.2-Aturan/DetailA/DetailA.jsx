@@ -32,13 +32,14 @@ export default function DetailA(props) {
           Kerjakan dengan sebaik mungkin untuk mencapai skor minimal agar kamu
           dapat melanjutkan ke modul berikutnya
         </p>
-
-        <button
-          className="bg-pertama !w-max text-white font-semibold border border-kedua !py-2.5 !px-6.5 !rounded-xl
-  hover:cursor-pointer"
-        >
-          Mulai {detail[0].Kelas}
-        </button>
+        <a href="/soal">
+          <button
+            className=" bg-pertama !w-max text-white !bg-pertama font-semibold border-none !border-pertama !py-2.5 !px-6.5 !rounded-xl
+          hover:cursor-pointer outline-none"
+          >
+            Mulai {detail[0].Kelas}
+          </button>
+        </a>
       </div>
     </>
   );

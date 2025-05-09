@@ -9,8 +9,6 @@ import Container from "../../navbar/Container";
 import useActivePage from "../../../data/useActivePage";
 import Stepper from "../1.2-All-Product/components/Stepper1";
 
-
-
 export default function Metode() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 500);
 
