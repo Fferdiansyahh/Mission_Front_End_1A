@@ -22,7 +22,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin: 134px 20px 64px;
+  margin: 64px 20px 64px;
   width: 100%;
   /* justify-content: center; */
   max-width: 500px !important;
@@ -45,8 +45,9 @@ body {
 }
 
 .beranda-1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8) 0 100%),
-    url("/src/Assets/bg-1.jpeg");
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.8) 0 100%),
+    url("/src/Assets/bg-1.jpeg"); */
+  background-image: url("/Assets/bg-1.jpeg");
   background-size: 100%;
   background-position: center;
   background-color: black;
@@ -364,13 +365,11 @@ h5 {
 
 .footer {
   height: max-content;
-  /* width: 100%; */
   font-family: "DM Sans";
   padding: 64px 120px;
   align-items: center;
   background-color: white;
   border: 1px solid hsla(265, 10%, 23%, 0.122);
-  /* box-sizing: border-box; */
   display: flex;
   flex-direction: column;
 }
