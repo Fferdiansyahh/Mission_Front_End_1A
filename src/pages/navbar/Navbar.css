@@ -7,7 +7,7 @@ p {
 }
 
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   background-color: white;
@@ -46,7 +46,6 @@ p {
 }
 
 .n-2-1 {
-  display: block;
   display: flex;
   gap: 20px;
 }
@@ -109,13 +108,15 @@ nav ul li {
   border-radius: 10px;
 }
 
-
 @media (max-width: 500px) {
   .n {
     margin: 0px 28px;
   }
 
-  .progress-bar{
+  .progress-bar {
+    display: none;
+  }
+  .n-2-1 {
     display: none;
   }
 }

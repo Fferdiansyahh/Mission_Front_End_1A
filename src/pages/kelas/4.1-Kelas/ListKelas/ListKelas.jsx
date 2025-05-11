@@ -3,17 +3,10 @@ import "../../../navbar/NavbarKelas.css";
 import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa6";
 import star from "../../../../assets/star.svg";
-
 import ceklis from "../../../../assets/ceklis.png";
-import {
-  CheckCircle,
-  PlayCircle,
-  FileText,
-  ClipboardList,
-  Book,
-} from "lucide-react";
-import PopupReview from "../../../navbar/components/PopupReview";
 
+import PopupReview from "../../../navbar/components/PopupReview";
+import { useNavigate } from "react-router-dom";
 
 export default function ListKelas(props) {
   const { metodee, display, dataKelas = [] } = props;
@@ -32,6 +25,18 @@ export default function ListKelas(props) {
 
   const closePopup = () => {
     setIsPopupOpen(false);
+  };
+
+  const navigate = useNavigate();
+  const handleNavigate = (tlList) => {
+    const routes = {
+      "Rangkuman: ": "/rangkuman",
+      "Soal: ": "/soal",
+    };
+
+    if (routes[tlList]) {
+      navigate(routes[tlList]);
+    }
   };
 
   return (
@@ -61,7 +66,8 @@ export default function ListKelas(props) {
               {dataKelas.map((item) => (
                 <div
                   key={item.id}
-                  className={`flex justify-between p-4 rounded-xl border border-${item.br}  bg-${item.bg}`}
+                  onClick={() => handleNavigate(item.tlList)}
+                  className={`flex justify-between p-4 rounded-xl border border-${item.br}  bg-${item.bg} cursor-pointer`}
                 >
                   <div className="hr-i">
                     <img src={item.img} alt={item.kelas} />
@@ -108,7 +114,6 @@ export default function ListKelas(props) {
         </p>
       </div>
       {isPopupOpen && <PopupReview isOpen={isPopupOpen} onClose={closePopup} />}
-     
     </main>
   );
 }

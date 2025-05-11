@@ -54,7 +54,7 @@
 
 @media (max-width: 500px) {
   .met-des {
-    width: 100lvw;
+    width: 100vw;
     display: flex;
     flex-direction: column-reverse;
     gap: 36px;
@@ -67,6 +67,6 @@
   }
 
   .met {
-    width: 100%;
+    /* width: 100%; */
   }
 }

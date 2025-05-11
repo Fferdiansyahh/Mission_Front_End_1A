@@ -171,7 +171,7 @@ h5 {
 
 .d-k-1-2-btn {
   border-left: transparent solid 2px;
-  width: 270%;
+  width: 120%;
   display: flex;
   flex-direction: row;
   justify-content: end;
@@ -266,7 +266,7 @@ h5 {
 .d-k-bar {
   display: flex;
   justify-content: space-between;
-  width: 28%;
+  width: max-content;
 }
 
 @media (max-width: 500px) {
@@ -309,6 +309,7 @@ h5 {
   .d-k-1-2-btn {
     flex-direction: column;
     gap: 3px;
+    width: 100%;
   }
 
   .d-k-f {

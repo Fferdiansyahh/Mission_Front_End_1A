@@ -18,7 +18,8 @@ export default function Container({ children }) {
     "/soal",
     "/aturan",
     "/congrats",
-    "/try",
+    "/result",
+
     "/rangkuman",
   ].includes(location.pathname);
 
@@ -32,11 +33,10 @@ export default function Container({ children }) {
   ].includes(location.pathname);
 
   return (
-    <main className="    ">
+    <main className="  ">
       {hideNavbarKelas && <NavbarKelas />}
       {!hideNavbarKelas && <Navbar1 isLoggedIn={isLoggedIn} />}
 
-      {/* <Navbar /> */}
       {children}
       {hideFooterKelas && <Footer1 dis="hidden" disp="flex" />}
       {hideFooterKelas || (!shouldHideFooter && <Footer dis="block" />)}

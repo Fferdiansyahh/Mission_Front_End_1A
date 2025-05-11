@@ -10,8 +10,6 @@ import useActivePage from "../../data/useActivePage";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdLogout } from "react-icons/md";
 import Stepper from "../home/1.2-All-Product/components/Stepper1";
-import NotifModul from "./components/NotifModul";
-import { ChevronDownIcon } from "flowbite-react";
 
 export default function Navbar1() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -63,7 +61,7 @@ export default function Navbar1() {
         </div>
         <div className="n-2">
           {!hideLoginRegister && (
-            <div className="n-2-1">
+            <div className="n-2-1 ">
               <a href="/kategori">
                 <p className="text-kelima">Kategori</p>
               </a>
@@ -111,60 +109,97 @@ export default function Navbar1() {
           </div>
         </div>
       </div>
+
       <div
         className={`${
           isMenuOpen ? "block" : "hidden"
         } fixed top-15 right-30  max-sm:right-0 max-sm:w-full w-max border border-kedua rounded-b-sm shadow `}
       >
-        <ul className="flex flex-col h-max font-medium   border border-kedua  bg-white md:space-x-8 rtl:space-x-reverse  md:mt-0 md:border-0">
-          <li className="!m-0">
-            <a
-              href="/kategori"
-              className="hidden max-sm:block !text-kelima w-full py-4 px-3 hover:font-semibold border border-kedua pr-14 max-sm:pr-0 "
-            >
-              Kategori
-            </a>
-          </li>
+        {isLoggedIn ? (
+          <ul className="flex flex-col h-max font-medium   border border-kedua  bg-white md:space-x-8 rtl:space-x-reverse  md:mt-0 md:border-0">
+            <li className="!m-0">
+              <a
+                href="/kategori"
+                className="hidden max-sm:block !text-kelima w-full py-4 px-3 hover:font-semibold border border-kedua pr-14 max-sm:pr-0 "
+              >
+                Kategori
+              </a>
+            </li>
+            <li className="!m-0">
+              <a
+                href="/profil-saya"
+                className="block !text-kelima w-full py-4 px-3  border border-y-kedua border-x-0  pr-14 max-sm:pr-0 "
+              >
+                Profil Saya
+              </a>
+            </li>
+            <li className="!m-0">
+              <a
+                href="/kelas-saya"
+                className="block !text-kelima w-full py-4 px-3 hover:font-semibold border border-y-kedua border-x-0 pr-14 max-sm:pr-0 "
+              >
+                Kelas Saya
+              </a>
+            </li>
+            <li className="!m-0">
+              <a
+                href="/pesanan"
+                className="block !text-kelima w-full py-4 px-3 hover:font-semibold border border-y-kedua border-x-0  pr-14 max-sm:pr-0"
+              >
+                Pesanan Saya
+              </a>
+            </li>
+            <li className="!m-0">
+              <a
+                onClick={logout}
+                href="/login"
+                className="flex gap-1.5 items-center !text-red-500 w-full py-4 px-3 hover:font-semibold border border-y-kedua border-x-0  pr-14 max-sm:pr-0"
+              >
+                Keluar
+                <MdLogout
+                  className="text-red-500"
+                  style={{ width: "24px", height: "24px" }}
+                />
+              </a>
+            </li>
+          </ul>
+        ) : (
+          <ul className="flex flex-col h-max font-medium   border border-kedua  bg-white md:space-x-8 rtl:space-x-reverse  md:mt-0 md:border-0">
+            <li className="!m-0">
+              <a
+                href="/"
+                className="hidden max-sm:block !text-kelima w-full py-4 px-3 hover:font-semibold border border-kedua pr-14 max-sm:pr-0 "
+              >
+                Beranda
+              </a>
+            </li>
+            <li className="!m-0">
+              <a
+                href="/kategori"
+                className="block !text-kelima w-full py-4 px-3  border border-y-kedua border-x-0  pr-14 max-sm:pr-0 "
+              >
+                Kategori
+              </a>
+            </li>
+            <li className="!m-0">
+              <div className="flex flex-col w-full p-3 gap-2">
+                <a
+                  href="/login"
+                  className="block !text-kelima w-full py-4 px-3 text-center !text-base !font-bold !text-white bg-pertama rounded-xl border border-pertama    max-sm:pr-0 "
+                >
+                  Login
+                </a>
 
-          <li className="!m-0">
-            <a
-              href="#"
-              className="block !text-kelima w-full py-4 px-3  border border-y-kedua border-x-0  pr-14 max-sm:pr-0 "
-            >
-              Profil Saya
-            </a>
-          </li>
-
-          <li className="!m-0">
-            <a
-              href="/kategori"
-              className="block !text-kelima w-full py-4 px-3 hover:font-semibold border border-y-kedua border-x-0 pr-14 max-sm:pr-0 "
-            >
-              Kelas Saya
-            </a>
-          </li>
-          <li className="!m-0">
-            <a
-              href="/kategori"
-              className="block !text-kelima w-full py-4 px-3 hover:font-semibold border border-y-kedua border-x-0  pr-14 max-sm:pr-0"
-            >
-              Pesanan Saya
-            </a>
-          </li>
-          <li className="!m-0">
-            <a
-              onClick={logout}
-              href="/login"
-              className="flex gap-1.5 items-center !text-red-500 w-full py-4 px-3 hover:font-semibold border border-y-kedua border-x-0  pr-14 max-sm:pr-0"
-            >
-              Keluar
-              <MdLogout
-                className="text-red-500"
-                style={{ width: "24px", height: "24px" }}
-              />
-            </a>
-          </li>
-        </ul>
+                <a
+                  href="/register"
+                  className="block !text-kelima w-full py-4 px-3 text-center !text-base !font-bold !text-pertama rounded-xl  border border-pertama  max-sm:pr-0 "
+                >
+                  Register
+                </a>
+              </div>
+            </li>
+          </ul>
+        )}
       </div>
     </nav>
   );

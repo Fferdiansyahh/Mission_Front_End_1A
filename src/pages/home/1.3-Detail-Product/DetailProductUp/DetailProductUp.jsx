@@ -1,11 +1,6 @@
 import "./DetailProductUp.css";
 
-import Star1 from "../../../../assets/star_1.png";
-import Star2 from "../../../../assets/star_2.png";
-import Star3 from "../../../../assets/star_3.png";
-import bg1 from "../../../../assets/bg-1.jpeg";
-
-export default function DetailProductUp() {
+ export default function DetailProductUp() {
   return (
     <>
       <div className="detail-up-1">
@@ -30,8 +25,8 @@ export default function DetailProductUp() {
             Manager.
           </h1>
           <p className="d-1-1-2">
-          Belajar bersama tutor profesional di Video Course. 
-          Kapanpun, di manapun.
+            Belajar bersama tutor profesional di Video Course. Kapanpun, di
+            manapun.
           </p>
 
           <div className="card-u-1-1-2-1">

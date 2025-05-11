@@ -7,10 +7,11 @@ import check from "/src/assets/check.svg";
 import quiz from "/src/assets/quiz.svg";
 import Footer1 from "../../../navbar/Footer-1";
 import questions from "../../../../data/soal";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import hitungHasilUjian from "../../../../data/hitungHasil";
 import PopupDone from "../../../navbar/components/PopupDone";
+import { HasilUjianContext } from "../../../../data/HasilUjianContext.jsx";
 
 export default function SoalPretest() {
   const [showPopup, setShowPopup] = useState(false);
@@ -128,18 +129,15 @@ export default function SoalPretest() {
     }
   };
 
-  const handleOpenPopup = () => {
-    setShowPopup(true);
-  };
-
   const handleClosePopup = () => {
     setShowPopup(false);
   };
 
+  const { setHasilUjian } = useContext(HasilUjianContext);
+
   const handleConfirmSelesai = () => {
-    console.log("Mulai hitungHasilUjian");
     const hasilPerhitungan = hitungHasilUjian(questions, selectedOptions);
-    console.log("Selesai hitungHasilUjian:", hasilPerhitungan);
+    setHasilUjian(hasilPerhitungan); // simpan ke global context
     navigate("/result", { state: { hasilUjian: hasilPerhitungan } });
     setShowPopup(false);
   };
@@ -151,7 +149,7 @@ export default function SoalPretest() {
   return (
     <>
       <div>
-        <main className="flex flex-row w-full h-max box-border bg-white max-sm:flex-col">
+        <main className="flex flex-row flex-1 w-full h-max box-border bg-white max-sm:flex-col">
           <ListSoal
             activeQuestionId={questions[currentQuestionIndex].id}
             selectedOptions={selectedOptions}

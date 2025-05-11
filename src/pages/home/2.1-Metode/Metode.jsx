@@ -27,6 +27,7 @@ export default function Metode() {
   return (
     <>
       <Container>
+        <div className="w-dvw">
         <div className="hidden max-sm:block w-full  mt-25">
           <Stepper activePage={activePage} />
         </div>
@@ -43,6 +44,7 @@ export default function Metode() {
               <DetailProductBuy image={ImgBuy} display="block" dis="none" />
             )}
           </div>
+        </div>
         </div>
       </Container>
     </>

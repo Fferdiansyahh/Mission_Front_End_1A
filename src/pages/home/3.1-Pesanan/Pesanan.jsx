@@ -1,20 +1,6 @@
 import "./Pesanan.css";
 import React, { useState } from "react";
 
-import Home23 from "../home-2/Home23";
-
-import CardImg1 from "../../../assets/card-1.jpeg";
-import CardImg2 from "../../../assets/card-2.jpeg";
-import CardImg3 from "../../../assets/card-3.jpeg";
-import CardImg4 from "../../../assets/card-4.jpeg";
-import CardImg5 from "../../../assets/card-5.jpeg";
-import CardImg6 from "../../../assets/card-6.jpeg";
-import CardImgU1 from "../../../assets/u-1.png";
-import CardImgU2 from "../../../assets/u-2.png";
-import CardImgU3 from "../../../assets/u-3.png";
-import CardImgU4 from "../../../assets/u-4.png";
-import CardImgU5 from "../../../assets/u-5.png";
-import CardImgU6 from "../../../assets/u-6.png";
 import {
   FaChevronLeft,
   FaChevronRight,

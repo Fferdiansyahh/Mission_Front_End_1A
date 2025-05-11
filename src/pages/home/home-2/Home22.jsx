@@ -31,7 +31,7 @@ export default function Home22(props) {
   };
   return (
     <div
-      className={`flex items-center space-x-6 relative overflow-x-auto scrollbar-hide whitespace-nowrap py-2 max-sm:w-full w-${wd}`}
+      className={`flex items-center space-x-6 relative overflow-x-scroll scrollbar-hide whitespace-nowrap py-2 max-sm:w-dvw w-${wd}`}
     >
       {categories.map((category) => (
         <div
@@ -53,14 +53,5 @@ export default function Home22(props) {
         }}
       />
     </div>
-    // <div className="b-2-2">
-    //   <a className="b-2-2-1" href="#">
-    //     Semua Kelas
-    //   </a>
-    //   <a href="#">Pemasaran</a>
-    //   <a href="#">Desain</a>
-    //   <a href="#">Pengembangan Diri</a>
-    //   <a href="#">Bisnis</a>
-    // </div>
   );
 }

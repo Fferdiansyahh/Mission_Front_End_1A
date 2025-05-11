@@ -6,7 +6,8 @@ import "./NavbarKelas.css";
 import { useState, useEffect, useRef, useContext } from "react";
 import NotifModul from "./components/NotifModul";
 import { AuthContext } from "../../data/authContext";
-import { MdLogout } from "react-icons/md";
+import { MdEmojiEvents, MdLogout } from "react-icons/md";
+import { HasilUjianContext } from "../../data/HasilUjianContext";
 
 export default function NavbarKelas() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,6 +27,9 @@ export default function NavbarKelas() {
     };
   }, []);
 
+  const { hasilUjian } = useContext(HasilUjianContext);
+  const nilaiAkhir =
+    !hasilUjian || hasilUjian.nilai < 80 ? 0 : hasilUjian.nilai;
   return (
     <nav className="navbar-kelas">
       <div className="navbar-left">
@@ -36,19 +40,44 @@ export default function NavbarKelas() {
       </div>
 
       <div className="navbar-right">
-        <div className="progress-bar">
-          <div className="progress-fill" />
-        </div>
+        {nilaiAkhir == 100 ? (
+          <div className="flex justify-center items-center border border-pertama rounded-xl gap-4 py-2 px-6.5">
+            <div className="relative" ref={dropdownRef}>
+              {open && (
+                <NotifModul
+                  judul="Modul Sudah Selesai"
+                  detail="16 dari 16 modul telah selesai, silahkan download sertifikat"
+                />
+              )}
 
-        <div className="relative" ref={dropdownRef}>
-          {open && <NotifModul />}
-
-          <div className="flex items-center" onClick={() => setOpen(!open)}>
-            <span className="progress-text">10/12</span>
-            <ChevronDownIcon className="dropdown-icon" />
+              <div
+                className="flex items-center gap-2"
+                onClick={() => setOpen(!open)}
+              >
+                <MdEmojiEvents className="text-pertama w-6 h-6" />
+                <span className="text-base font-bold text-pertama">
+                  Ambil Sertifikat
+                </span>
+                <ChevronDownIcon className="dropdown-icon" />
+              </div>
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className="flex justify-center items-center gap-4">
+            <div className="progress-bar">
+              <div className="progress-fill" />
+            </div>
 
+            <div className="relative" ref={dropdownRef}>
+              {open && <NotifModul />}
+
+              <div className="flex items-center" onClick={() => setOpen(!open)}>
+                <span className="progress-text">10/12</span>
+                <ChevronDownIcon className="dropdown-icon" />
+              </div>
+            </div>
+          </div>
+        )}
         <div>
           <img
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -58,6 +87,7 @@ export default function NavbarKelas() {
           />
         </div>
       </div>
+
       <div
         className={`${
           isMenuOpen ? "block" : "hidden"

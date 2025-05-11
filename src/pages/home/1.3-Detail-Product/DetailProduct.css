@@ -1,9 +1,9 @@
 .pdetail-1 {
-  margin: 70px 50px 20px;
+  margin: 120px 120px 60px;
   display: flex;
   flex-direction: column;
   gap: 36px;
-  /* width: ; */
+  /* width: auto; */
   box-sizing: border-box;
 }
 
@@ -12,7 +12,7 @@
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
   gap: 33px;
-  width: 100%;
+  /* width: 100%; */
   box-sizing: border-box;
 }
 
@@ -47,6 +47,7 @@
 
   .pdetail-1 {
     margin: 20px 28px;
+    width: 100lvw;
 
     gap: 24px;
   }

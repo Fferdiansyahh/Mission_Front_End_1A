@@ -30,6 +30,7 @@ export default function Sertifikat() {
             <div className="w-full  h-full  p-6 flex flex-col gap-9 bg-white border border-kedua rounded-lg box-border">
               <div className="flex bg-keempat h-max max-h-90  max-sm:h-60 w-full justify-center items-center rounded-lg">
                 <img
+                  id="sertifikat-image"
                   className=" w-full h-full max-w-100  max-sm:h-50"
                   src={Serti}
                   alt="Play "
@@ -84,8 +85,12 @@ export default function Sertifikat() {
                     <p className="text-kelima text-sm font-medium">3.5 (86)</p>
                   </div>
                 </div>
-                <a className="flex gap-4 px-6.5 py-2.5 justify-center border h-max items-center border-pertama w-max max-sm:w-full rounded-xl ">
-                  <img className=" h-4" src={Down} />
+                <a
+                  href={Serti}
+                  download="Sertifikat.jpg"
+                  className="flex gap-4 px-6.5 py-2.5 justify-center border h-max items-center border-pertama w-max max-sm:w-full rounded-xl"
+                >
+                  <img className="h-4" src={Down} alt="Download Icon" />
                   <p className="text-pertama font-semibold text-normal">
                     Download Sertifikat
                   </p>

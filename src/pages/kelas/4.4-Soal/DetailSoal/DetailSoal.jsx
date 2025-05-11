@@ -113,18 +113,6 @@ export default function DetailSoal(props) {
           </a>
         </div>
       </div>
-      {/* {isPopupOpen && <PopupDone isOpen={isPopupOpen} onClose={closePopup} />} */}
-      {/* {isPopupOpen && (
-        <PopupDone
-          isOpen={isPopupOpen}
-          onClose={closePopup}
-          onConfirm={(hasilUjian) => {
-            setHasilUjian(hasilUjian); // Menyimpan hasil ujian di state
-            navigate("/result", { state: { hasilUjian } }); // Navigasi ke halaman hasil
-          }}
-          selectedOptions={selectedOptions}
-        />
-      )} */}
     </section>
   );
 }

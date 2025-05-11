@@ -99,12 +99,11 @@ export default function DetailKelas() {
             </div>
           </div>
           <div className="d-k-1-2">
-            <div className="d-k-bar">
-              <p>Progres Kelas : </p>
-              <h4 className=" flex items-center ">{item.pg}%</h4>
-            </div>
-
             <div className="flex w-full">
+              <div className="d-k-bar">
+                <p className="whitespace-nowrap">Progres Kelas : </p>
+                <h4 className=" flex items-center ">{item.pg}%</h4>
+              </div>
               <div className="progress-bar-c">
                 <div className="progress-bar-1">
                   <div
@@ -113,20 +112,20 @@ export default function DetailKelas() {
                   ></div>
                 </div>
               </div>
-
-              {item.pg === 100 ? (
-                <div className="d-k-1-2-btn">
-                  <button className="k-btn-1">Unduh Sertifikat</button>
-                  <button className="k-btn-2">Lihat Kelas Detail</button>
-                </div>
-              ) : (
-                <div className="w-full">
-                  <a href="/kelas">
-                    <button className="k-btn-3">Lanjutan pembelajaran</button>
-                  </a>
-                </div>
-              )}
             </div>
+
+            {item.pg === 100 ? (
+              <div className="d-k-1-2-btn">
+                <button className="k-btn-1">Unduh Sertifikat</button>
+                <button className="k-btn-2">Lihat Kelas Detail</button>
+              </div>
+            ) : (
+              <div className="w-full">
+                <a href="/kelas">
+                  <button className="k-btn-3">Lanjutan pembelajaran</button>
+                </a>
+              </div>
+            )}
           </div>
         </div>
       ))}

@@ -33,7 +33,7 @@ body {
   .bayar-des {
     display: flex;
     flex-direction: column-reverse;
-    width: 100%;
+    width: 100lvw;
     gap: 36px;
     margin: 28px 20px;
   }
