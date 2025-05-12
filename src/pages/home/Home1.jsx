@@ -4,7 +4,7 @@ import "../login/Login.css";
 
 export default function Home1() {
   return (
-    <div className="rounded-xl border border-kedua bg-[url('/src/Assets/bg-1.jpeg')] bg-center bg-cover">
+    <div className="rounded-xl border border-kedua bg-[url('/src/assets/bg-1.jpeg')] bg-center bg-cover">
       <div className="beranda-1 bg-black/80">
         <div className="b-1-1">
           <h1 className="b-1-1-1">
