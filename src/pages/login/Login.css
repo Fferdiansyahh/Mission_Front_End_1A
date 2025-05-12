@@ -45,9 +45,10 @@ body {
 }
 
 .beranda-1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8) 0 100%),
+    url("/src/assets/bg-1.jpeg");
   background-size: 100%;
   background-position: center;
- 
 
   height: max-content;
   padding: 82px 140px 64px 140px;
@@ -279,7 +280,7 @@ h5 {
 
 .beranda-3 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8) 0 100%),
-    url("../../Assets/bg-2.jpeg");
+    url("/src/assets/bg-2.jpeg");
   background-size: 100%;
   background-position: center;
   background-color: black;
@@ -343,14 +344,14 @@ h5 {
 }
 
 .beranda-3 button {
-  margin-top: 13px;
-  position: absolute;
+  /* margin-top: 13px; */
+  /* position: absolute; */
   height: 42px;
   background-color: #ffbd3a;
   width: max-content;
   text-align: center;
   padding: 10px 20px;
-  right: 31%;
+  /* right: 31%; */
   border-radius: 10px;
 }
 

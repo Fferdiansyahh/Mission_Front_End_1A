@@ -26,7 +26,11 @@ export default function Home3() {
             id="ctaEmail"
             placeholder="Masukkan Emailmu"
           />
-          <button>Subscribe</button>
+          
+            <button className="absolute transform translate-y-1 -translate-x-30 max-sm:-translate-x-0 " >
+              Subscribe
+            </button>
+         
         </div>
       </div>
     </div>
