@@ -1,17 +1,11 @@
 import "../login/Login.css";
-import CardImg1 from "../../assets/card-1.jpeg";
-import CardImg2 from "../../assets/card-2.jpeg";
-import CardImgU1 from "../../assets/u-1.png";
-import CardImgU2 from "../../assets/u-2.png";
-import Star1 from "../../assets/star_1.png";
-import Star2 from "../../assets/star_2.png";
-import Star3 from "../../assets/star_3.png";
-import ImgBg1 from "/src/Assets/bg-1.jpeg";
+
+// import ImgBg1 from "/src/Assets/bg-1.jpeg";
 
 export default function Home1() {
   return (
-    <div className="rounded-xl border border-kedua bg-[url('/src/Assets/bg-1.jpeg') bg-cover  ]">
-      <div className="beranda-1    ">
+    <div className="rounded-xl border border-kedua bg-[url('/src/Assets/bg-1.jpeg')] bg-center bg-cover">
+      <div className="beranda-1 bg-black/80">
         <div className="b-1-1">
           <h1 className="b-1-1-1">
             Revolusi Pembelajaran: Temukan Ilmu Baru melalui Pratfrom Video
