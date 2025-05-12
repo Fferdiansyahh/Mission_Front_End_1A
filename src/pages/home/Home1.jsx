@@ -10,8 +10,8 @@ import ImgBg1 from "/src/Assets/bg-1.jpeg";
 
 export default function Home1() {
   return (
-    <div className="beranda-1">
-     
+    <div className="rounded-xl border border-kedua bg-[url('/src/Assets/bg-1.jpeg') bg-cover  ]">
+      <div className="beranda-1    ">
         <div className="b-1-1">
           <h1 className="b-1-1-1">
             Revolusi Pembelajaran: Temukan Ilmu Baru melalui Pratfrom Video
@@ -27,7 +27,7 @@ export default function Home1() {
         <button className="b-1-2">
           Temukan Video Course untuk Dipelajari!
         </button>
-     
+      </div>
     </div>
   );
 }

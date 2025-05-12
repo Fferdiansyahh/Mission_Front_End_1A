@@ -45,12 +45,13 @@ body {
 }
 
 .beranda-1 {
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.8) 0 100%),
-    url("/src/Assets/bg-1.jpeg"); */
-  background-image: url("/Assets/bg-1.jpeg");
+  /* background: linear-gradient(rgba(0, 0, 0, 0.8) 0 100%); */
+  /* url("/src/Assets/bg-1.jpeg"); */
+  background-image: url("/src/Assets/bg-1.jpeg");
   background-size: 100%;
   background-position: center;
-  background-color: black;
+  /* background-color: linear-gradient(rgba(0, 0, 0, 0.8) 0 100%); */
+
   height: max-content;
   padding: 82px 140px 64px 140px;
   border-radius: 10px;
