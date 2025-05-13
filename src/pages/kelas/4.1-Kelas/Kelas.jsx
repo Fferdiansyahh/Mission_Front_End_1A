@@ -91,7 +91,7 @@ export default function Kelas() {
       <Container>
         <div>
           <main className="flex flex-row w-screen h-max box-border bg-white max-sm:flex-col  ">
-            <section className="w-full h-full box-border max-sm:mt-16">
+            <section className="w-full h-full box-border ">
               <div className="flex border border-primary-100 w-full px-28   h-125  bg-red justify-center  bg-black max-sm:h-50 max-sm:px-9  ">
                 <div className="border border-none  w-full h-full bg-gray-600 items-center flex justify-center">
                   <img

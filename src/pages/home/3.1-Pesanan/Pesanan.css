@@ -1,5 +1,5 @@
 .pesanan {
-  padding: 124px 120px 64px;
+  padding: 64px 120px;
   justify-items: center;
   display: flex;
   gap: 40px;
@@ -99,7 +99,8 @@ p {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  width: 100vw;
+  /* width: 100vw !important; */
+  min-width: 50vw;
   padding: 20px;
   border: #3a35411f solid 1px;
   border-radius: 10px;
@@ -126,7 +127,7 @@ p {
   box-sizing: border-box;
   display: flex;
   gap: 20px;
-  width: 100%;
+  /* width: 100%; */
 }
 .p-2-u p {
   font-size: 16px;
@@ -249,7 +250,7 @@ p {
 @media (max-width: 500px) {
   .pesanan {
     flex-direction: column;
-    padding: 100px 28px 20px;
+    padding: 28px 20px;
     width: none;
   }
 
@@ -269,7 +270,7 @@ p {
     display: block !important;
   }
   .pesanan-2 {
-    width: 100lvw;
+    width: 100%;
     box-sizing: border-box;
   }
 

@@ -8,7 +8,7 @@ export default function Home22(props) {
   const categoryRefs = useRef({});
 
   const {
-    wd = "full",
+    wd = "lvw",
     categories = [
       "Semua Kelas",
       "Pemasaran",
@@ -31,7 +31,7 @@ export default function Home22(props) {
   };
   return (
     <div
-      className={`flex items-center space-x-6 relative overflow-x-scroll scrollbar-hide whitespace-nowrap py-2 max-sm:w-dvw w-${wd}`}
+      className={`flex items-center space-x-6 relative overflow-x-scroll box-border scrollbar-hide whitespace-nowrap py-2 max-sm:w-18/20 w-${wd}`}
     >
       {categories.map((category) => (
         <div

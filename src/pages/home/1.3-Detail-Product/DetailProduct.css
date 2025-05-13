@@ -1,5 +1,5 @@
 .pdetail-1 {
-  margin: 120px 120px 60px;
+  margin: 64px 120px;
   display: flex;
   flex-direction: column;
   gap: 36px;
@@ -46,8 +46,8 @@
   }
 
   .pdetail-1 {
-    margin: 20px 28px;
-    width: 100lvw;
+    margin: 28px 20px;
+    /* width: 100lvw; */
 
     gap: 24px;
   }

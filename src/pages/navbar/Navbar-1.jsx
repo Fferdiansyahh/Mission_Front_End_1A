@@ -113,7 +113,7 @@ export default function Navbar1() {
       <div
         className={`${
           isMenuOpen ? "block" : "hidden"
-        } fixed top-15 right-30  max-sm:right-0 max-sm:w-full w-max border border-kedua rounded-b-sm shadow `}
+        } fixed top-15 right-30 max-sm:left-0  max-sm:right-0 max-sm:w-9/10 w-max border border-kedua rounded-b-sm shadow `}
       >
         {isLoggedIn ? (
           <ul className="flex flex-col h-max font-medium   border border-kedua  bg-white md:space-x-8 rtl:space-x-reverse  md:mt-0 md:border-0">

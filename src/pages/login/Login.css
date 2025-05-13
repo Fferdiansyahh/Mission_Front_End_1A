@@ -2,9 +2,10 @@ body {
   font-family: Arial, sans-serif;
   background-color: #fffdf3 !important;
   height: 100%;
+
   margin: 0px;
   /* padding: 0px; */
-  width: 100vw;
+  width: fit-content;
 }
 
 /* navbar end */
@@ -115,7 +116,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  width: auto;
+  width: autox;
+  box-sizing: border-box;
 }
 
 .b-2-2 {
@@ -139,6 +141,7 @@ body {
   text-decoration-thickness: 3px;
 }
 .b-2-1 h1 {
+   font-size: 32px;
   margin: 0px;
   font-family: "Poppins";
 }
@@ -147,6 +150,7 @@ body {
   margin: 0px;
   color: #333333ad;
   font-family: "DM Sans";
+  text-align: left;
 }
 .b-2-3 {
   display: grid;
@@ -645,7 +649,7 @@ a {
 @media (max-width: 500px) {
   .form-container {
     width: 100%;
-    margin: 100px 28px 50px;
+    margin: 28px;
     padding: 20px;
   }
 
@@ -665,7 +669,7 @@ a {
     margin: 40px 0px 40px 0px;
   }
   .card-1 {
-    width: 90%;
+    width: 90% !important;
     /* margin: 0px 20px; */
   }
   .card-img {
@@ -686,8 +690,12 @@ a {
     padding: 40px 20px 40px 20px;
   }
 
+  .b-2-1 {
+    width: 90%;
+  }
+
   .b-2-1 h1 {
-    font-size: 25px;
+    font-size: 24px;
     padding-right: 10px;
   }
 
@@ -820,6 +828,11 @@ a {
     gap: 10px;
     margin-bottom: 30px;
     /* justify-content: space-between; */
+  }
+
+  .b-1-2 {
+    font-weight: 400;
+    font-size: 14px !important;
   }
 
   .b-2-2 {

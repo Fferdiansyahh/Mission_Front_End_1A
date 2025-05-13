@@ -46,22 +46,22 @@ export default function DetailR(props) {
   const tanggalUjian = new Date().toLocaleString(); // Ganti dengan tanggal dari props jika ada
 
   return (
-    <div className="max-w-full mx-auto mt-10 px-20 bg-white rounded-2xl">
-      <h2 className="text-xl font-semibold text-gray-800 mb-2">
+    <div className="max-w-full mx-auto mt-10 px-20 max-sm:px-5 max-sm:mx-5 bg-white rounded-2xl">
+      <h2 className="text-xl font-semibold text-gray-800 mb-2 ">
         Tanggal {detail[0].Kelas}:
       </h2>
-      <p className="text-gray-600 pb-6">{tanggalUjian}</p>
+      <p className="text-gray-600 pb-6  !text-left">{tanggalUjian}</p>
 
-      <div className="grid grid-cols-4 bg-white border border-kedua rounded-lg overflow-hidden mb-6">
+      <div className="grid grid-cols-4 max-sm:grid-cols-2 bg-white border border-kedua  overflow-hidden mb-6">
         <div
-          className={`flex flex-col justify-center ${bgColor} text-white p-4 gap-2`}
+          className={`flex flex-col justify-center ${bgColor} text-white p-4 gap-2 max-sm:border max-sm:border-kedua`}
         >
           <div className="text-sm">Nilai</div>
           <div className="text-3xl font-bold">{nilai}</div>
         </div>
-        <div className="flex flex-col justify-center p-4 gap-2 border-l border-gray-200">
-          <div className="text-sm text-gray-500">Total Soal</div>
-          <div className="text-2xl font-semibold text-gray-800">
+        <div className="flex flex-col justify-center p-4 gap-2 border-l border-gray-200 max-sm:border max-sm:border-kedua">
+          <div className="text-sm text-gray-500">Soal</div>
+          <div className="text-2xl font-semibold text-gray-800 ">
             {benar + salah}
           </div>
         </div>
@@ -83,8 +83,8 @@ export default function DetailR(props) {
 
       <div className="flex flex-col gap-2 mb-8 ">
         <h1 className="text-2xl font-bold text-gray-800">{feedback.title}</h1>
-        <p className="text-gray-600">{feedback.desc1}</p>
-        <p className="text-gray-600 pt-2">{feedback.desc2}</p>
+        <p className="text-gray-600 !text-left">{feedback.desc1}</p>
+        <p className="text-gray-600 pt-2 !text-left">{feedback.desc2}</p>
         <a href="/soal " className={`${nilai <= 50 ? "block" : "hidden"} `}>
           <button className="flex gap-4 !px-7 !py-3 !border items-center  !border-pertama !bg-white !text-pertama !w-max rounded-xl mt-5 hover:bg-opacity-90 transition-colors">
             <img className="h-4" src={feedback.image} alt="action" />

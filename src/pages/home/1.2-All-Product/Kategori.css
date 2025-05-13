@@ -1,5 +1,5 @@
 .kat {
-  padding: 110px 120px 40px;
+  padding: 64px 120px;
 }
 
 .kategori {
@@ -7,6 +7,7 @@
   justify-items: center;
   display: flex;
   gap: 40px;
+  
 }
 .kategori-1 {
   border: 1px solid #3a35411f;
@@ -220,17 +221,18 @@ p {
 
 @media (max-width: 500px) {
   .kat {
-    padding: 100px 25px 40px;
+    padding: 20px 20px;
   }
   .kategori {
     flex-direction: column;
+    /* width: 100%; */
   }
 
   .k-1-1-2 div {
     display: flex !important;
   }
   .kategori-1 {
-    width: 89%;
+    width: 100%;
   }
 
   .k-1-1-2-2 {
@@ -248,5 +250,9 @@ p {
   }
   .kategori-2-3 {
     justify-content: center;
+  }
+
+  .card-1{
+    width: 100%;
   }
 }

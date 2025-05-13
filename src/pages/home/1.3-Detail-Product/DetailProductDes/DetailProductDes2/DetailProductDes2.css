@@ -24,10 +24,12 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    /* width: 100%; */
   }
 
   .card-1-1-1 h3 {
     font-size: 17px !important;
   }
 
+  
 }

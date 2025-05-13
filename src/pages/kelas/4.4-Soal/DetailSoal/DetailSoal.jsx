@@ -36,7 +36,7 @@ export default function DetailSoal(props) {
           <h1 className="text-2xl font-semibold text-gray-800 mb-4">
             Pertanyaan {currentQuestion.id}
           </h1>
-          <p className="text-lg text-gray-500 mb-5">
+          <p className="text-lg text-gray-500 !text-left !mb-5">
             {currentQuestion.question}
           </p>
 
@@ -64,7 +64,7 @@ export default function DetailSoal(props) {
                 </div>
                 <p
                   htmlFor={`option-${option.id}`}
-                  className={`flex-1 cursor-pointer ${
+                  className={`flex-1 cursor-pointer !text-left ${
                     selectedOptions[currentQuestionIndex] === option.id
                       ? "text-pertama font-medium"
                       : "text-gray-600"

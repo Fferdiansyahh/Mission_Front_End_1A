@@ -19,12 +19,12 @@ export default function Rangkuman() {
       tlList: "Video: ",
       kelas: "Introduction to HR",
       det: "12 Menit",
-      bg: "keempat",
-      br: "pertama",
+      bg: "white",
+      br: "kedua",
     },
     {
       id: 1,
-      img: playL,
+      img: check,
       tlList: "Video: ",
       kelas: "Introduction to HR",
       det: "12 Menit",
@@ -33,7 +33,7 @@ export default function Rangkuman() {
     },
     {
       id: 1,
-      img: playL,
+      img: check,
       tlList: "Video: ",
       kelas: "Introduction to HR",
       det: "12 Menit",
@@ -42,7 +42,7 @@ export default function Rangkuman() {
     },
     {
       id: 2,
-      img: playL,
+      img: check,
       tlList: "Video: ",
       kelas: "Introduction to HR",
       det: "12 Menit",
@@ -51,7 +51,7 @@ export default function Rangkuman() {
     },
     {
       id: 3,
-      img: playL,
+      img: check,
       tlList: "Video: ",
       kelas: "Introduction to HR",
       det: "12 Menit",
@@ -60,7 +60,7 @@ export default function Rangkuman() {
     },
     {
       id: 4,
-      img: playL,
+      img: check,
       tlList: "Video: ",
       kelas: "Introduction to HR",
       det: "12 Menit",
@@ -73,8 +73,8 @@ export default function Rangkuman() {
       tlList: "Rangkuman: ",
       kelas: "Introduction to HR",
       det: "12 Menit",
-      bg: "white",
-      br: "kedua",
+      bg: "keempat",
+      br: "pertama",
     },
     {
       id: 6,
@@ -101,12 +101,12 @@ export default function Rangkuman() {
                 />
               </div>
             </div>
-            <div className="max-w-full mx-auto mt-10 p-20 bg-white  rounded-2xl">
+            <div className="max-w-full mx-auto px-30 py-9 max-sm:p-5  bg-white  rounded-2xl">
               <div className="flex flex-col gap-2">
                 <h1 className="text-lg font-bold ">
                   Download Rangkuman Modul!
                 </h1>
-                <p className="text-gray-600">
+                <p className="text-gray-600 !text-left">
                   Silahkan download rangkuman modul dari materi yang telah kamu
                   pelajari
                 </p>

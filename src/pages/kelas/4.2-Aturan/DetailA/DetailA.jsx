@@ -16,19 +16,19 @@ export default function DetailA(props) {
   } = props;
   return (
     <>
-      <div className=" bg-white  max-w-full py-9 px-30 max-sm:p-6 mx-auto">
+      <div className=" bg-white  max-w-full py-9 px-30 max-sm:p-6 mx-auto !text-left">
         <h2 className="text-xl font-bold mb-4">Aturan</h2>
 
-        <p className="text-gray-600 mb-4">
+        <p className="text-gray-600 mb-4 !text-left ">
           Kerjakan {detail[0].Kelas} dengan sebaik mungkin untuk mengukur
           pemahaman terkait materi yang telah kamu pelajari
         </p>
-        <p className="text-gray-600 mb-0.5 ">
+        <p className="text-gray-600 !mb-0.5 !text-left">
           Syarat Nilai Kelulusan: {detail[0].Syarat}
         </p>
-        <p className="text-gray-600  mb-4">{detail[0].Durasi}</p>
+        <p className="text-gray-600  !mb-4 !text-left">{detail[0].Durasi}</p>
 
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-600 !mb-6 !text-left">
           Kerjakan dengan sebaik mungkin untuk mencapai skor minimal agar kamu
           dapat melanjutkan ke modul berikutnya
         </p>

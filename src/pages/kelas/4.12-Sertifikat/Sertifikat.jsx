@@ -17,11 +17,11 @@ export default function Sertifikat() {
     <>
       <Container>
         <main className="flex  max-sm:w-full w-dvw  flex-row h-max box-border  max-sm:flex-col justify-center">
-          <section className="max-w-260 gap-9  mt-25 mb-16 max-sm:mt-22 max-sm:mb-5 max-sm:mx-7 flex flex-col justify-center items-center box-border ">
+          <section className="w-full mx-30 max-sm:w-auto gap-9 my-16 max-sm:mt-7  max-sm:mx-5 flex flex-col justify-center items-center box-border ">
             <div className="w-full flex">
               <p className="overflow-hidden text-ellipsis whitespace-nowrap w-64 text-kelima ">
                 Beranda / Desain / Gapai Karier Impianmu sebagai Seorang UI/UX
-                Designer & Product Manager.
+                Designer & Product Managez.
               </p>
               <p className="text-kelima"> / </p>
               <p>Sertifikat</p>
@@ -43,7 +43,7 @@ export default function Sertifikat() {
                     <h6 className="text-base font-semibold mb-2">
                       Big 4 Auditor Financial Analyst
                     </h6>
-                    <p className="text-sm text-kelima font-medium ">
+                    <p className="text-sm text-kelima font-medium !text-left ">
                       Mulai transformasi dengan instruktur profesional, harga
                       yang terjangkau, dan kurikulum terbaik
                     </p>
@@ -52,7 +52,9 @@ export default function Sertifikat() {
                   <div className="flex flex-row gap-3 items-center">
                     <img className="h-10 w-10" src={imgU}></img>
                     <div className="flex flex-col">
-                      <p className="font-medium text-base ">Jenna Ortega</p>
+                      <p className="font-medium text-base !text-left ">
+                        Jenna Ortega
+                      </p>
                       <div className="flex flex-row gap-1">
                         <p className="text-kelima text-sm ">
                           Senior Accountant di

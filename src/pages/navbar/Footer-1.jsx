@@ -19,7 +19,7 @@ export default function Footer1(props) {
 
   return (
     <div
-      className={`${desktopClass} ${mobileClass} justify-between w-full px-7 py-4.5  bg-pertama text-white  `}
+      className={`${desktopClass} ${mobileClass} justify-between px-7 py-4.5  bg-pertama text-white  `}
     >
       <div className="flex flex-row items-center gap-2 font-bold">
         <FaChevronLeft />
