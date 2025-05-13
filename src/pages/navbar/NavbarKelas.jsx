@@ -55,7 +55,7 @@ export default function NavbarKelas() {
                 onClick={() => setOpen(!open)}
               >
                 <MdEmojiEvents className="text-pertama w-6 h-6" />
-                <span className="text-base font-bold text-pertama">
+                <span className="text-base font-bold text-pertama max-sm:hidden block" >
                   Ambil Sertifikat
                 </span>
                 <ChevronDownIcon className="dropdown-icon" />
